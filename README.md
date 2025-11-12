@@ -28,3 +28,4 @@ https://github.com/lab313ru/ghidra_amiga_ldr
 # test_python
 en este directorio estamos guardando los scripts que estamos desarrollando para extraer la estructura de los datos.
 
+
