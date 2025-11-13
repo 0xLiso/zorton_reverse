@@ -202,6 +202,7 @@
         "mem_offset": "0x000450f6",
         "value": {
           "ptr_hit_ok": [
+            "0x000450cc",
             "0x000052cc",
             "-----"
           ],
@@ -226,7 +227,8 @@
             "22206"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -256,10 +258,11 @@
         "mem_offset": "0x000450c4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00045082",
             "0x00005282",
             "-----"
           ],
@@ -323,10 +326,11 @@
         "mem_offset": "0x0004507a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00044fee",
             "0x000051ee",
             "-----"
           ],
@@ -402,10 +406,11 @@
         "mem_offset": "0x00045048",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00044fee",
             "0x000051ee",
             "-----"
           ],
@@ -481,10 +486,11 @@
         "mem_offset": "0x00044fe6",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00044fa4",
             "0x000051a4",
             "-----"
           ],
@@ -548,10 +554,11 @@
         "mem_offset": "0x00044f9c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00044f42",
             "0x00005142",
             "-----"
           ],
@@ -627,10 +634,11 @@
         "mem_offset": "0x00044f3a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00044ec6",
             "0x000050c6",
             "-----"
           ],
@@ -694,10 +702,11 @@
         "mem_offset": "0x00044f08",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00044ec6",
             "0x000050c6",
             "-----"
           ],
@@ -761,10 +770,11 @@
         "mem_offset": "0x00044ebe",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00044e7c",
             "0x0000507c",
             "-----"
           ],
@@ -838,15 +848,18 @@
             "23654"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -876,22 +889,27 @@
         "mem_offset": "0x00044e52",
         "value": {
           "ptr_hit_ok": [
+            "0x000453d6",
             "0x000055d6",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00045400",
             "0x00005600",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x40005600",
             "0x3ffc5800",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x40000000",
             "0x3ffc0200",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x40314000",
             "0x402d4200",
             "-----"
           ],
@@ -951,15 +969,18 @@
             "02311"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1068,6 +1089,7 @@
         "mem_offset": "0x00045354",
         "value": {
           "ptr_hit_ok": [
+            "0x0004532a",
             "0x0000552a",
             "-----"
           ],
@@ -1082,15 +1104,18 @@
             "44203"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1120,6 +1145,7 @@
         "mem_offset": "0x00045326",
         "value": {
           "ptr_hit_ok": [
+            "0x000452fc",
             "0x000054fc",
             "-----"
           ],
@@ -1134,15 +1160,18 @@
             "44415"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1172,14 +1201,17 @@
         "mem_offset": "0x000452f0",
         "value": {
           "ptr_frame_dato": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004526c",
             "0x0000546c",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00045296",
             "0x00005496",
             "-----"
           ],
@@ -1255,6 +1287,7 @@
         "mem_offset": "0x00045292",
         "value": {
           "ptr_hit_ok": [
+            "0x00045268",
             "0x00005468",
             "-----"
           ],
@@ -1269,15 +1302,18 @@
             "45046"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1307,6 +1343,7 @@
         "mem_offset": "0x00045268",
         "value": {
           "ptr_hit_ok": [
+            "0x0004523e",
             "0x0000543e",
             "-----"
           ],
@@ -1321,11 +1358,13 @@
             "45046"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1365,15 +1404,18 @@
             "45874"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1692,7 +1734,8 @@
             "36916"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1742,7 +1785,8 @@
             "36409"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1792,7 +1836,8 @@
             "24911"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1842,7 +1887,8 @@
             "24629"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1892,7 +1938,8 @@
             "24035"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1942,7 +1989,8 @@
             "23860"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -1992,7 +2040,8 @@
             "13564"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -2042,7 +2091,8 @@
             "13296"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -2092,7 +2142,8 @@
             "13000"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -2142,7 +2193,8 @@
             "12661"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -2192,7 +2244,8 @@
             "12362"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -2242,7 +2295,8 @@
             "37537"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -2292,7 +2346,8 @@
             "37173"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -2851,18 +2906,22 @@
         "mem_offset": "0x00045db0",
         "value": {
           "ptr_frame_dato": [
+            "0x00045956",
             "0x00005b56",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00045a82",
             "0x00005c82",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00045b46",
             "0x00005d46",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x00045d86",
             "0x00005f86",
             "-----"
           ],
@@ -2877,11 +2936,13 @@
             "24920"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk2": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -2911,10 +2972,11 @@
         "mem_offset": "0x00045d7e",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00045d54",
             "0x00005f54",
             "-----"
           ],
@@ -2978,6 +3040,7 @@
         "mem_offset": "0x00045d50",
         "value": {
           "ptr_hit_ok": [
+            "0x00045d26",
             "0x00005f26",
             "-----"
           ],
@@ -2992,15 +3055,18 @@
             "25143"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -3030,22 +3096,27 @@
         "mem_offset": "0x00045d12",
         "value": {
           "ptr_frame_dato": [
+            "0x00045ba2",
             "0x00005da2",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00045bfe",
             "0x00005dfe",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00045c5a",
             "0x00005e5a",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x00045ce8",
             "0x00005ee8",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x0004598c",
             "0x00005b8c",
             "-----"
           ],
@@ -3060,11 +3131,13 @@
             "25143"
           ],
           "ptr_frame_idk2": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk3": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -3094,10 +3167,11 @@
         "mem_offset": "0x00045ce0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00045cb6",
             "0x00005eb6",
             "-----"
           ],
@@ -3161,10 +3235,11 @@
         "mem_offset": "0x00045cae",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00045c84",
             "0x00005e84",
             "-----"
           ],
@@ -3228,15 +3303,18 @@
         "mem_offset": "0x0004578e",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00045734",
             "0x00005934",
             "-----"
           ],
           "ptr_frame_ko_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_ko_end": [
@@ -3311,6 +3389,7 @@
         "mem_offset": "0x00045730",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7fc",
             "0x0000c9fc",
             "-----"
           ],
@@ -3325,15 +3404,18 @@
             "25633"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -3512,10 +3594,11 @@
         "mem_offset": "0x0004625c",
         "value": {
           "ptr_frame_dato": [
-            "0x000063ec",
-            "-----"
+            "0x000461ec",
+            "0x000063ec"
           ],
           "ptr_hit_ok": [
+            "0x0004621a",
             "0x0000641a",
             "-----"
           ],
@@ -3579,6 +3662,7 @@
         "mem_offset": "0x00046216",
         "value": {
           "ptr_hit_ok": [
+            "0x000461ec",
             "0x000063ec",
             "-----"
           ],
@@ -3593,15 +3677,18 @@
             "19358"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -3631,10 +3718,11 @@
         "mem_offset": "0x000461e4",
         "value": {
           "ptr_frame_dato": [
-            "0x00006374",
-            "-----"
+            "0x00046174",
+            "0x00006374"
           ],
           "ptr_hit_ok": [
+            "0x000461a2",
             "0x000063a2",
             "-----"
           ],
@@ -3698,6 +3786,7 @@
         "mem_offset": "0x0004619e",
         "value": {
           "ptr_hit_ok": [
+            "0x00046174",
             "0x00006374",
             "-----"
           ],
@@ -3712,15 +3801,18 @@
             "19476"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -3750,10 +3842,11 @@
         "mem_offset": "0x0004616c",
         "value": {
           "ptr_frame_dato": [
-            "0x000062fc",
-            "-----"
+            "0x000460fc",
+            "0x000062fc"
           ],
           "ptr_hit_ok": [
+            "0x0004612a",
             "0x0000632a",
             "-----"
           ],
@@ -3817,6 +3910,7 @@
         "mem_offset": "0x00046126",
         "value": {
           "ptr_hit_ok": [
+            "0x000460fc",
             "0x000062fc",
             "-----"
           ],
@@ -3831,15 +3925,18 @@
             "19595"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -3869,10 +3966,11 @@
         "mem_offset": "0x000460f4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000625a",
-            "-----"
+            "0x0004605a",
+            "0x0000625a"
           ],
           "ptr_hit_ok": [
+            "0x000460b2",
             "0x000062b2",
             "-----"
           ],
@@ -3936,6 +4034,7 @@
         "mem_offset": "0x000460ae",
         "value": {
           "ptr_hit_ok": [
+            "0x00046084",
             "0x00006284",
             "-----"
           ],
@@ -3950,15 +4049,18 @@
             "19661"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -3998,15 +4100,18 @@
             "19984"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -4046,15 +4151,18 @@
             "19867"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -4243,6 +4351,7 @@
         "mem_offset": "0x00046580",
         "value": {
           "ptr_hit_ok": [
+            "0x00046556",
             "0x00006756",
             "-----"
           ],
@@ -4267,7 +4376,8 @@
             "03622"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -4297,18 +4407,22 @@
         "mem_offset": "0x00046546",
         "value": {
           "ptr_frame_dato": [
+            "0x0004633a",
             "0x0000653a",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00046470",
             "0x00006670",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x000464ec",
             "0x000066ec",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x00046368",
             "0x00006568",
             "-----"
           ],
@@ -4396,6 +4510,7 @@
         "mem_offset": "0x00046406",
         "value": {
           "ptr_hit_ok": [
+            "0x000463dc",
             "0x000065dc",
             "-----"
           ],
@@ -4410,15 +4525,18 @@
             "03850"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -4448,10 +4566,11 @@
         "mem_offset": "0x000463d4",
         "value": {
           "ptr_frame_dato": [
-            "0x00006568",
-            "-----"
+            "0x00046368",
+            "0x00006568"
           ],
           "ptr_hit_ok": [
+            "0x00046392",
             "0x00006592",
             "-----"
           ],
@@ -4525,15 +4644,18 @@
             "04328"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -4563,6 +4685,7 @@
         "mem_offset": "0x00046364",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7fc",
             "0x0000c9fc",
             "-----"
           ],
@@ -4577,15 +4700,18 @@
             "04407"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -4615,6 +4741,7 @@
         "mem_offset": "0x00046336",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
@@ -4629,15 +4756,18 @@
             "04136"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -4726,10 +4856,11 @@
         "mem_offset": "0x000466ee",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000466ac",
             "0x000068ac",
             "-----"
           ],
@@ -4793,10 +4924,11 @@
         "mem_offset": "0x000466a4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046662",
             "0x00006862",
             "-----"
           ],
@@ -4870,15 +5002,18 @@
             "21053"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -5027,10 +5162,11 @@
         "mem_offset": "0x000468a4",
         "value": {
           "ptr_frame_dato": [
-            "0x00006960",
-            "-----"
+            "0x00046760",
+            "0x00006960"
           ],
           "ptr_hit_ok": [
+            "0x0004687a",
             "0x00006a7a",
             "-----"
           ],
@@ -5094,10 +5230,11 @@
         "mem_offset": "0x00046872",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046848",
             "0x00006a48",
             "-----"
           ],
@@ -5161,10 +5298,11 @@
         "mem_offset": "0x000467cc",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004678a",
             "0x0000698a",
             "-----"
           ],
@@ -5238,15 +5376,18 @@
             "40378"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -5276,6 +5417,7 @@
         "mem_offset": "0x0004675c",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
@@ -5290,15 +5432,18 @@
             "40994"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -5377,7 +5522,8 @@
             "24348"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -5486,10 +5632,11 @@
         "mem_offset": "0x00046a72",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046a30",
             "0x00006c30",
             "-----"
           ],
@@ -5553,10 +5700,11 @@
         "mem_offset": "0x00046a28",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000469e6",
             "0x00006be6",
             "-----"
           ],
@@ -5620,10 +5768,11 @@
         "mem_offset": "0x000469de",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004699c",
             "0x00006b9c",
             "-----"
           ],
@@ -5697,15 +5846,18 @@
             "15135"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -5764,15 +5916,18 @@
             "45226"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -6001,26 +6156,31 @@
         "mem_offset": "0x00046de6",
         "value": {
           "ptr_frame_dato": [
-            "0x00006d78",
-            "-----"
+            "0x00046bec",
+            "0x00006dec"
           ],
           "ptr_hit_ok": [
+            "0x00046bec",
             "0x00006dec",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00046c60",
             "0x00006e60",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x00046cd4",
             "0x00006ed4",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x00046d48",
             "0x00006f48",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x00046dbc",
             "0x00006fbc",
             "-----"
           ],
@@ -6035,7 +6195,8 @@
             "15156"
           ],
           "ptr_frame_idk3": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -6065,10 +6226,11 @@
         "mem_offset": "0x00046db4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046d72",
             "0x00006f72",
             "-----"
           ],
@@ -6142,15 +6304,18 @@
             "16050"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -6180,10 +6345,11 @@
         "mem_offset": "0x00046d40",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046cfe",
             "0x00006efe",
             "-----"
           ],
@@ -6257,15 +6423,18 @@
             "15745"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -6295,10 +6464,11 @@
         "mem_offset": "0x00046ccc",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046c8a",
             "0x00006e8a",
             "-----"
           ],
@@ -6372,15 +6542,18 @@
             "15641"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -6410,10 +6583,11 @@
         "mem_offset": "0x00046c58",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046c16",
             "0x00006e16",
             "-----"
           ],
@@ -6487,15 +6661,18 @@
             "15550"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -6525,10 +6702,11 @@
         "mem_offset": "0x00046be4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046ba2",
             "0x00006da2",
             "-----"
           ],
@@ -6602,15 +6780,18 @@
             "15449"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -6640,10 +6821,11 @@
         "mem_offset": "0x00046b70",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046b2e",
             "0x00006d2e",
             "-----"
           ],
@@ -6717,15 +6899,18 @@
             "15340"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -7004,26 +7189,31 @@
         "mem_offset": "0x000472c2",
         "value": {
           "ptr_frame_dato": [
-            "0x00007234",
-            "-----"
+            "0x000470b0",
+            "0x000072b0"
           ],
           "ptr_hit_ok": [
+            "0x000470b0",
             "0x000072b0",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004712c",
             "0x0000732c",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x000471a8",
             "0x000073a8",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x00047224",
             "0x00007424",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x00047298",
             "0x00007498",
             "-----"
           ],
@@ -7038,7 +7228,8 @@
             "09779"
           ],
           "ptr_frame_idk3": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -7068,10 +7259,12 @@
         "mem_offset": "0x00047290",
         "value": {
           "ptr_frame_dato": [
+            "0x0004724e",
             "0x0000744e",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00046fb2",
             "0x000071b2",
             "-----"
           ],
@@ -7155,7 +7348,8 @@
             "11405"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -7185,18 +7379,22 @@
         "mem_offset": "0x00047214",
         "value": {
           "ptr_frame_dato": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x000471d2",
             "0x000073d2",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00046f3a",
             "0x0000713a",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x00046fb2",
             "0x000071b2",
             "-----"
           ],
@@ -7284,10 +7482,11 @@
         "mem_offset": "0x00046faa",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00046f68",
             "0x00007168",
             "-----"
           ],
@@ -7351,6 +7550,7 @@
         "mem_offset": "0x00046f64",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7fc",
             "0x0000c9fc",
             "-----"
           ],
@@ -7365,15 +7565,18 @@
             "10722"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -7403,6 +7606,7 @@
         "mem_offset": "0x00046f36",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7fc",
             "0x0000c9fc",
             "-----"
           ],
@@ -7417,15 +7621,18 @@
             "10486"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -7465,15 +7672,18 @@
             "09915"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -7712,10 +7922,12 @@
         "mem_offset": "0x00047724",
         "value": {
           "ptr_frame_dato": [
+            "0x000475ba",
             "0x000077ba",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x000476fa",
             "0x000078fa",
             "-----"
           ],
@@ -7730,11 +7942,13 @@
             "07507"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -7764,14 +7978,17 @@
         "mem_offset": "0x000476ee",
         "value": {
           "ptr_frame_dato": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x000475e4",
             "0x000077e4",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00047694",
             "0x00007894",
             "-----"
           ],
@@ -7847,14 +8064,17 @@
         "mem_offset": "0x00047688",
         "value": {
           "ptr_frame_dato": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x000475e4",
             "0x000077e4",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004762e",
             "0x0000782e",
             "-----"
           ],
@@ -7930,10 +8150,11 @@
         "mem_offset": "0x00047626",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000475e4",
             "0x000077e4",
             "-----"
           ],
@@ -7997,22 +8218,27 @@
         "mem_offset": "0x0004cb16",
         "value": {
           "ptr_hit_ok": [
+            "0xffffffff",
             "0xfffc01ff",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x66e8202e",
             "0x66e4222e",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x00084e5e",
             "0x0004505e",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x4e750000",
             "0x4e710200",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x0000007c",
             "0x-003fd84",
             "-----"
           ],
@@ -8312,6 +8538,7 @@
         "mem_offset": "0x00047b78",
         "value": {
           "ptr_hit_ok": [
+            "0x00047b4e",
             "0x00007d4e",
             "-----"
           ],
@@ -8336,7 +8563,8 @@
             "02855"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -8366,14 +8594,17 @@
         "mem_offset": "0x00047b42",
         "value": {
           "ptr_frame_dato": [
+            "0x0004796a",
             "0x00007b6a",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00047ab8",
             "0x00007cb8",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00047b18",
             "0x00007d18",
             "-----"
           ],
@@ -8449,10 +8680,12 @@
         "mem_offset": "0x00047b10",
         "value": {
           "ptr_frame_dato": [
+            "0x0004796a",
             "0x00007b6a",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00047ae6",
             "0x00007ce6",
             "-----"
           ],
@@ -8516,6 +8749,7 @@
         "mem_offset": "0x00047ae2",
         "value": {
           "ptr_hit_ok": [
+            "0x00047a58",
             "0x00007c58",
             "-----"
           ],
@@ -8530,15 +8764,18 @@
             "03278"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -8568,10 +8805,12 @@
         "mem_offset": "0x00047ab0",
         "value": {
           "ptr_frame_dato": [
+            "0x0004796a",
             "0x00007b6a",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00047a86",
             "0x00007c86",
             "-----"
           ],
@@ -8635,6 +8874,7 @@
         "mem_offset": "0x00047a82",
         "value": {
           "ptr_hit_ok": [
+            "0x00047a58",
             "0x00007c58",
             "-----"
           ],
@@ -8649,15 +8889,18 @@
             "03055"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -8687,14 +8930,17 @@
         "mem_offset": "0x00047a4c",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x000479c6",
             "0x00007bc6",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00047a22",
             "0x00007c22",
             "-----"
           ],
@@ -8770,10 +9016,12 @@
         "mem_offset": "0x00047a1a",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x000479f0",
             "0x00007bf0",
             "-----"
           ],
@@ -8847,15 +9095,18 @@
             "03278"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -8885,10 +9136,12 @@
         "mem_offset": "0x00047888",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00047846",
             "0x00007a46",
             "-----"
           ],
@@ -8962,15 +9215,18 @@
             "03055"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -9369,10 +9625,11 @@
         "mem_offset": "0x00048144",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048102",
             "0x00008302",
             "-----"
           ],
@@ -9436,10 +9693,11 @@
         "mem_offset": "0x000480fa",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000480b8",
             "0x000082b8",
             "-----"
           ],
@@ -9503,6 +9761,7 @@
         "mem_offset": "0x000480b4",
         "value": {
           "ptr_hit_ok": [
+            "0x0004808a",
             "0x0000828a",
             "-----"
           ],
@@ -9527,7 +9786,8 @@
             "05483"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -9557,10 +9817,11 @@
         "mem_offset": "0x00048082",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048040",
             "0x00008240",
             "-----"
           ],
@@ -9624,10 +9885,11 @@
         "mem_offset": "0x00048038",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047ff6",
             "0x000081f6",
             "-----"
           ],
@@ -9691,10 +9953,11 @@
         "mem_offset": "0x00047fee",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047fac",
             "0x000081ac",
             "-----"
           ],
@@ -9758,10 +10021,11 @@
         "mem_offset": "0x00047fa4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047f30",
             "0x00008130",
             "-----"
           ],
@@ -9825,10 +10089,11 @@
         "mem_offset": "0x00047f72",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047f30",
             "0x00008130",
             "-----"
           ],
@@ -9892,10 +10157,11 @@
         "mem_offset": "0x00047f28",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047eb4",
             "0x000080b4",
             "-----"
           ],
@@ -9959,10 +10225,11 @@
         "mem_offset": "0x00047ef6",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047eb4",
             "0x000080b4",
             "-----"
           ],
@@ -10026,10 +10293,11 @@
         "mem_offset": "0x00047eac",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047e38",
             "0x00008038",
             "-----"
           ],
@@ -10093,10 +10361,11 @@
         "mem_offset": "0x00047e7a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047e38",
             "0x00008038",
             "-----"
           ],
@@ -10160,10 +10429,11 @@
         "mem_offset": "0x00047e30",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047dee",
             "0x00007fee",
             "-----"
           ],
@@ -10227,10 +10497,11 @@
         "mem_offset": "0x00047de6",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047da4",
             "0x00007fa4",
             "-----"
           ],
@@ -10294,10 +10565,11 @@
         "mem_offset": "0x00047d9c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047d28",
             "0x00007f28",
             "-----"
           ],
@@ -10361,10 +10633,11 @@
         "mem_offset": "0x00047d6a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047d28",
             "0x00007f28",
             "-----"
           ],
@@ -10428,10 +10701,11 @@
         "mem_offset": "0x00047d20",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00047cde",
             "0x00007ede",
             "-----"
           ],
@@ -10515,7 +10789,8 @@
             "07410"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -10624,6 +10899,7 @@
         "mem_offset": "0x000483e4",
         "value": {
           "ptr_hit_ok": [
+            "0x000483ba",
             "0x000085ba",
             "-----"
           ],
@@ -10648,7 +10924,8 @@
             "21236"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -10678,10 +10955,11 @@
         "mem_offset": "0x000483b2",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048370",
             "0x00008570",
             "-----"
           ],
@@ -10745,10 +11023,11 @@
         "mem_offset": "0x00048368",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048326",
             "0x00008526",
             "-----"
           ],
@@ -10822,15 +11101,18 @@
             "21593"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -11059,6 +11341,7 @@
         "mem_offset": "0x000486e0",
         "value": {
           "ptr_hit_ok": [
+            "0x000486b6",
             "0x000088b6",
             "-----"
           ],
@@ -11083,7 +11366,8 @@
             "28315"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -11113,10 +11397,11 @@
         "mem_offset": "0x000486ae",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004866c",
             "0x0000886c",
             "-----"
           ],
@@ -11180,10 +11465,11 @@
         "mem_offset": "0x00048664",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048622",
             "0x00008822",
             "-----"
           ],
@@ -11247,10 +11533,11 @@
         "mem_offset": "0x0004861a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000485d8",
             "0x000087d8",
             "-----"
           ],
@@ -11314,10 +11601,11 @@
         "mem_offset": "0x000485d0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004858e",
             "0x0000878e",
             "-----"
           ],
@@ -11381,10 +11669,11 @@
         "mem_offset": "0x00048586",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048512",
             "0x00008712",
             "-----"
           ],
@@ -11448,10 +11737,11 @@
         "mem_offset": "0x00048554",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048512",
             "0x00008712",
             "-----"
           ],
@@ -11515,10 +11805,11 @@
         "mem_offset": "0x0004850a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000484c8",
             "0x000086c8",
             "-----"
           ],
@@ -11582,10 +11873,11 @@
         "mem_offset": "0x000484c0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048466",
             "0x00008666",
             "-----"
           ],
@@ -11671,15 +11963,18 @@
             "29341"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -12048,6 +12343,7 @@
         "mem_offset": "0x00048c8c",
         "value": {
           "ptr_hit_ok": [
+            "0x00048c62",
             "0x00008e62",
             "-----"
           ],
@@ -12072,7 +12368,8 @@
             "17000"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -12102,10 +12399,11 @@
         "mem_offset": "0x00048c5a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048c18",
             "0x00008e18",
             "-----"
           ],
@@ -12169,10 +12467,11 @@
         "mem_offset": "0x00048c10",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048bce",
             "0x00008dce",
             "-----"
           ],
@@ -12236,6 +12535,7 @@
         "mem_offset": "0x00048bca",
         "value": {
           "ptr_hit_ok": [
+            "0x00048ba0",
             "0x00008da0",
             "-----"
           ],
@@ -12250,15 +12550,18 @@
             "17330"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -12288,26 +12591,31 @@
         "mem_offset": "0x00048b88",
         "value": {
           "ptr_frame_dato": [
-            "0x00008a3c",
-            "-----"
+            "0x000488b0",
+            "0x00008ab0"
           ],
           "ptr_hit_ok": [
+            "0x000488b0",
             "0x00008ab0",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00048924",
             "0x00008b24",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x000489b0",
             "0x00008bb0",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x00048a24",
             "0x00008c24",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x00048b5e",
             "0x00008d5e",
             "-----"
           ],
@@ -12322,7 +12630,8 @@
             "17330"
           ],
           "ptr_frame_idk3": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -12352,10 +12661,11 @@
         "mem_offset": "0x00048b56",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048b14",
             "0x00008d14",
             "-----"
           ],
@@ -12419,10 +12729,11 @@
         "mem_offset": "0x00048b0c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048aca",
             "0x00008cca",
             "-----"
           ],
@@ -12486,10 +12797,11 @@
         "mem_offset": "0x00048ac2",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048a4e",
             "0x00008c4e",
             "-----"
           ],
@@ -12553,10 +12865,11 @@
         "mem_offset": "0x00048a90",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048a4e",
             "0x00008c4e",
             "-----"
           ],
@@ -12640,7 +12953,8 @@
             "19241"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -12670,10 +12984,11 @@
         "mem_offset": "0x00048a1c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000489da",
             "0x00008bda",
             "-----"
           ],
@@ -12747,15 +13062,18 @@
             "17831"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -12785,10 +13103,11 @@
         "mem_offset": "0x000489a8",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048966",
             "0x00008b66",
             "-----"
           ],
@@ -12862,14 +13181,17 @@
             "18022"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x0004894e",
             "0x00008b4e",
             "-----"
           ],
@@ -12900,22 +13222,27 @@
         "mem_offset": "0x0004893c",
         "value": {
           "ptr_hit_ok": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00000200",
             "0x-003fc00",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x02000004",
             "0x01fc0204",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x25800004",
             "0x257c0204",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x891c0000",
             "0x89180200",
             "-----"
           ],
@@ -13025,10 +13352,11 @@
         "mem_offset": "0x00048f1c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048eda",
             "0x000090da",
             "-----"
           ],
@@ -13092,10 +13420,11 @@
         "mem_offset": "0x00048ed2",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048e90",
             "0x00009090",
             "-----"
           ],
@@ -13159,10 +13488,11 @@
         "mem_offset": "0x00048e88",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048e46",
             "0x00009046",
             "-----"
           ],
@@ -13236,15 +13566,18 @@
             "28103"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -13463,6 +13796,7 @@
         "mem_offset": "0x000491ba",
         "value": {
           "ptr_hit_ok": [
+            "0x00049190",
             "0x00009390",
             "-----"
           ],
@@ -13487,7 +13821,8 @@
             "34596"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -13517,10 +13852,11 @@
         "mem_offset": "0x00049188",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049146",
             "0x00009346",
             "-----"
           ],
@@ -13584,10 +13920,11 @@
         "mem_offset": "0x0004913e",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000490fc",
             "0x000092fc",
             "-----"
           ],
@@ -13651,10 +13988,11 @@
         "mem_offset": "0x000490f4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000490b2",
             "0x000092b2",
             "-----"
           ],
@@ -13718,10 +14056,11 @@
         "mem_offset": "0x000490aa",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049068",
             "0x00009268",
             "-----"
           ],
@@ -13785,10 +14124,11 @@
         "mem_offset": "0x00049060",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048fec",
             "0x000091ec",
             "-----"
           ],
@@ -13852,10 +14192,11 @@
         "mem_offset": "0x0004902e",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00048fec",
             "0x000091ec",
             "-----"
           ],
@@ -13919,10 +14260,11 @@
         "mem_offset": "0x00048fe4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9fc",
-            "-----"
+            "0x0004c7fc",
+            "0x0000c9fc"
           ],
           "ptr_hit_ok": [
+            "0x00048fa2",
             "0x000091a2",
             "-----"
           ],
@@ -14006,7 +14348,8 @@
             "36049"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -14095,10 +14438,11 @@
         "mem_offset": "0x0004934c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004930a",
             "0x0000950a",
             "-----"
           ],
@@ -14162,10 +14506,11 @@
         "mem_offset": "0x00049302",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000492c0",
             "0x000094c0",
             "-----"
           ],
@@ -14239,15 +14584,18 @@
             "11958"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -14366,10 +14714,11 @@
         "mem_offset": "0x00049490",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004944e",
             "0x0000964e",
             "-----"
           ],
@@ -14433,10 +14782,11 @@
         "mem_offset": "0x00049446",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049404",
             "0x00009604",
             "-----"
           ],
@@ -14500,10 +14850,11 @@
         "mem_offset": "0x000493fc",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000493ba",
             "0x000095ba",
             "-----"
           ],
@@ -14587,7 +14938,8 @@
             "40042"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -14816,10 +15168,11 @@
         "mem_offset": "0x00049784",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049742",
             "0x00009942",
             "-----"
           ],
@@ -14883,10 +15236,11 @@
         "mem_offset": "0x0004973a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000496c6",
             "0x000098c6",
             "-----"
           ],
@@ -14950,10 +15304,11 @@
         "mem_offset": "0x00049708",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000496c6",
             "0x000098c6",
             "-----"
           ],
@@ -15017,10 +15372,11 @@
         "mem_offset": "0x000496be",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004967c",
             "0x0000987c",
             "-----"
           ],
@@ -15084,10 +15440,11 @@
         "mem_offset": "0x00049674",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049632",
             "0x00009832",
             "-----"
           ],
@@ -15151,10 +15508,11 @@
         "mem_offset": "0x0004962a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x000495e8",
             "0x000097e8",
             "-----"
           ],
@@ -15218,10 +15576,11 @@
         "mem_offset": "0x000495e0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004956c",
             "0x0000976c",
             "-----"
           ],
@@ -15285,10 +15644,11 @@
         "mem_offset": "0x000495ae",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004956c",
             "0x0000976c",
             "-----"
           ],
@@ -15352,10 +15712,11 @@
         "mem_offset": "0x00049564",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049522",
             "0x00009722",
             "-----"
           ],
@@ -15429,15 +15790,18 @@
             "27496"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -15646,6 +16010,7 @@
         "mem_offset": "0x00049b00",
         "value": {
           "ptr_hit_ok": [
+            "0x00049ad6",
             "0x00009cd6",
             "-----"
           ],
@@ -15670,7 +16035,8 @@
             "33160"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -15700,10 +16066,11 @@
         "mem_offset": "0x00049ace",
         "value": {
           "ptr_frame_dato": [
-            "0x00009acc",
-            "-----"
+            "0x000498cc",
+            "0x00009acc"
           ],
           "ptr_hit_ok": [
+            "0x00049a8c",
             "0x00009c8c",
             "-----"
           ],
@@ -15767,10 +16134,12 @@
         "mem_offset": "0x00049a84",
         "value": {
           "ptr_frame_dato": [
+            "0x000498fa",
             "0x00009afa",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00049a42",
             "0x00009c42",
             "-----"
           ],
@@ -15834,10 +16203,11 @@
         "mem_offset": "0x00049a3a",
         "value": {
           "ptr_frame_dato": [
-            "0x00009b28",
-            "-----"
+            "0x00049928",
+            "0x00009b28"
           ],
           "ptr_hit_ok": [
+            "0x000499f8",
             "0x00009bf8",
             "-----"
           ],
@@ -15901,10 +16271,12 @@
         "mem_offset": "0x000499f0",
         "value": {
           "ptr_frame_dato": [
+            "0x00049984",
             "0x00009b84",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x000499ae",
             "0x00009bae",
             "-----"
           ],
@@ -15978,15 +16350,18 @@
             "33761"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16016,6 +16391,7 @@
         "mem_offset": "0x00049980",
         "value": {
           "ptr_hit_ok": [
+            "0x00049956",
             "0x00009b56",
             "-----"
           ],
@@ -16030,15 +16406,18 @@
             "32282"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16068,6 +16447,7 @@
         "mem_offset": "0x00049952",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
@@ -16082,15 +16462,18 @@
             "32249"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16120,6 +16503,7 @@
         "mem_offset": "0x00049924",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
@@ -16134,15 +16518,18 @@
             "32086"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16172,6 +16559,7 @@
         "mem_offset": "0x000498f6",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
@@ -16186,15 +16574,18 @@
             "32295"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16224,6 +16615,7 @@
         "mem_offset": "0x000498c8",
         "value": {
           "ptr_hit_ok": [
+            "0x0004989e",
             "0x00009a9e",
             "-----"
           ],
@@ -16238,15 +16630,18 @@
             "32252"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16276,6 +16671,7 @@
         "mem_offset": "0x0004989a",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
@@ -16290,15 +16686,18 @@
             "32004"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16497,10 +16896,12 @@
         "mem_offset": "0x00049e4a",
         "value": {
           "ptr_frame_dato": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00049e08",
             "0x0000a008",
             "-----"
           ],
@@ -16564,6 +16965,7 @@
         "mem_offset": "0x00049e04",
         "value": {
           "ptr_hit_ok": [
+            "0x00049dda",
             "0x00009fda",
             "-----"
           ],
@@ -16578,15 +16980,18 @@
             "31130"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16616,18 +17021,22 @@
         "mem_offset": "0x00049dca",
         "value": {
           "ptr_frame_dato": [
+            "0x00049c44",
             "0x00009e44",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x00049cb8",
             "0x00009eb8",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x00049d2c",
             "0x00009f2c",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x00049da0",
             "0x00009fa0",
             "-----"
           ],
@@ -16642,11 +17051,13 @@
             "31130"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk2": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16676,10 +17087,11 @@
         "mem_offset": "0x00049d98",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049d56",
             "0x00009f56",
             "-----"
           ],
@@ -16753,15 +17165,18 @@
             "31801"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16791,10 +17206,11 @@
         "mem_offset": "0x00049d24",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049ce2",
             "0x00009ee2",
             "-----"
           ],
@@ -16868,15 +17284,18 @@
             "31610"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -16906,10 +17325,11 @@
         "mem_offset": "0x00049cb0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049c6e",
             "0x00009e6e",
             "-----"
           ],
@@ -16983,15 +17403,18 @@
             "31446"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -17021,10 +17444,11 @@
         "mem_offset": "0x00049c3c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049bfa",
             "0x00009dfa",
             "-----"
           ],
@@ -17098,15 +17522,18 @@
             "31251"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -17265,10 +17692,12 @@
         "mem_offset": "0x0004a0e6",
         "value": {
           "ptr_frame_dato": [
+            "0x00049ffe",
             "0x0000a1fe",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004a0bc",
             "0x0000a2bc",
             "-----"
           ],
@@ -17283,11 +17712,13 @@
             "40170"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -17317,10 +17748,11 @@
         "mem_offset": "0x0004a0b4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000a140",
-            "-----"
+            "0x00049f40",
+            "0x0000a140"
           ],
           "ptr_hit_ok": [
+            "0x0004a072",
             "0x0000a272",
             "-----"
           ],
@@ -17384,10 +17816,11 @@
         "mem_offset": "0x0004a06a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a028",
             "0x0000a228",
             "-----"
           ],
@@ -17461,15 +17894,18 @@
             "40912"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -17499,10 +17935,11 @@
         "mem_offset": "0x00049ff6",
         "value": {
           "ptr_frame_dato": [
-            "0x0000a140",
-            "-----"
+            "0x00049f40",
+            "0x0000a140"
           ],
           "ptr_hit_ok": [
+            "0x00049fb4",
             "0x0000a1b4",
             "-----"
           ],
@@ -17566,10 +18003,11 @@
         "mem_offset": "0x00049fac",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x00049f6a",
             "0x0000a16a",
             "-----"
           ],
@@ -17643,15 +18081,18 @@
             "40379"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -17681,6 +18122,7 @@
         "mem_offset": "0x00049f3c",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c7d2",
             "0x0000c9d2",
             "-----"
           ],
@@ -17695,15 +18137,18 @@
             "40994"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -17982,10 +18427,11 @@
         "mem_offset": "0x0004a4f0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a4ae",
             "0x0000a6ae",
             "-----"
           ],
@@ -18049,10 +18495,11 @@
         "mem_offset": "0x0004a4a6",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a432",
             "0x0000a632",
             "-----"
           ],
@@ -18116,10 +18563,11 @@
         "mem_offset": "0x0004a474",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a432",
             "0x0000a632",
             "-----"
           ],
@@ -18183,10 +18631,11 @@
         "mem_offset": "0x0004a42a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a3e8",
             "0x0000a5e8",
             "-----"
           ],
@@ -18250,10 +18699,11 @@
         "mem_offset": "0x0004a3e0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a36c",
             "0x0000a56c",
             "-----"
           ],
@@ -18317,10 +18767,11 @@
         "mem_offset": "0x0004a3ae",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a36c",
             "0x0000a56c",
             "-----"
           ],
@@ -18384,6 +18835,7 @@
         "mem_offset": "0x0004a368",
         "value": {
           "ptr_hit_ok": [
+            "0x0004a33e",
             "0x0000a53e",
             "-----"
           ],
@@ -18398,15 +18850,18 @@
             "09280"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -18436,18 +18891,22 @@
         "mem_offset": "0x0004a32e",
         "value": {
           "ptr_frame_dato": [
+            "0x0004a1f2",
             "0x0000a3f2",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004a266",
             "0x0000a466",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004a2da",
             "0x0000a4da",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x0004a304",
             "0x0000a504",
             "-----"
           ],
@@ -18462,11 +18921,13 @@
             "09273"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk2": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -18506,15 +18967,18 @@
             "09779"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -18544,10 +19008,11 @@
         "mem_offset": "0x0004a2d2",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a290",
             "0x0000a490",
             "-----"
           ],
@@ -18621,15 +19086,18 @@
             "09671"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -18659,10 +19127,11 @@
         "mem_offset": "0x0004a25e",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a21c",
             "0x0000a41c",
             "-----"
           ],
@@ -18736,15 +19205,18 @@
             "09513"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -18774,10 +19246,11 @@
         "mem_offset": "0x0004a1ea",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a1a8",
             "0x0000a3a8",
             "-----"
           ],
@@ -18851,15 +19324,18 @@
             "09394"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -19238,26 +19714,31 @@
         "mem_offset": "0x0004ab36",
         "value": {
           "ptr_frame_dato": [
-            "0x0000a88c",
-            "-----"
+            "0x0004a700",
+            "0x0000a900"
           ],
           "ptr_hit_ok": [
+            "0x0004a700",
             "0x0000a900",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004a774",
             "0x0000a974",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x0004a7e8",
             "0x0000a9e8",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x0004a85c",
             "0x0000aa5c",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x0004ab0c",
             "0x0000ad0c",
             "-----"
           ],
@@ -19272,7 +19753,8 @@
             "41739"
           ],
           "ptr_frame_idk3": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -19302,26 +19784,31 @@
         "mem_offset": "0x0004aaf4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000aad0",
-            "-----"
+            "0x0004aa2c",
+            "0x0000ac2c"
           ],
           "ptr_hit_ok": [
+            "0x0004aa2c",
             "0x0000ac2c",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004a9b8",
             "0x0000abb8",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x0004aa2c",
             "0x0000ac2c",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x0004aaa0",
             "0x0000aca0",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x0004aaca",
             "0x0000acca",
             "-----"
           ],
@@ -19336,7 +19823,8 @@
             "42542"
           ],
           "ptr_frame_idk3": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -19386,7 +19874,8 @@
             "43899"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -19416,10 +19905,11 @@
         "mem_offset": "0x0004aa98",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004aa56",
             "0x0000ac56",
             "-----"
           ],
@@ -19493,15 +19983,18 @@
             "43376"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -19531,10 +20024,11 @@
         "mem_offset": "0x0004aa24",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a9e2",
             "0x0000abe2",
             "-----"
           ],
@@ -19608,15 +20102,18 @@
             "43198"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -19646,10 +20143,11 @@
         "mem_offset": "0x0004a9b0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a96e",
             "0x0000ab6e",
             "-----"
           ],
@@ -19723,15 +20221,18 @@
             "43033"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -19761,10 +20262,11 @@
         "mem_offset": "0x0004a93c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a8fa",
             "0x0000aafa",
             "-----"
           ],
@@ -19838,15 +20340,18 @@
             "42881"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -19876,10 +20381,11 @@
         "mem_offset": "0x0004a8c8",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a886",
             "0x0000aa86",
             "-----"
           ],
@@ -19953,15 +20459,18 @@
             "42717"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -19991,10 +20500,11 @@
         "mem_offset": "0x0004a854",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a812",
             "0x0000aa12",
             "-----"
           ],
@@ -20068,15 +20578,18 @@
             "42289"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20106,10 +20619,11 @@
         "mem_offset": "0x0004a7e0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a79e",
             "0x0000a99e",
             "-----"
           ],
@@ -20183,15 +20697,18 @@
             "42392"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20221,10 +20738,11 @@
         "mem_offset": "0x0004a76c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a72a",
             "0x0000a92a",
             "-----"
           ],
@@ -20298,15 +20816,18 @@
             "42146"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20336,10 +20857,11 @@
         "mem_offset": "0x0004a6f8",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a6b6",
             "0x0000a8b6",
             "-----"
           ],
@@ -20413,15 +20935,18 @@
             "42030"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20451,10 +20976,11 @@
         "mem_offset": "0x0004a684",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004a642",
             "0x0000a842",
             "-----"
           ],
@@ -20528,15 +21054,18 @@
             "41891"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20645,6 +21174,7 @@
         "mem_offset": "0x0004ae20",
         "value": {
           "ptr_hit_ok": [
+            "0x0004adf6",
             "0x0000aff6",
             "-----"
           ],
@@ -20659,15 +21189,18 @@
             "02312"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20697,6 +21230,7 @@
         "mem_offset": "0x0004adf2",
         "value": {
           "ptr_hit_ok": [
+            "0x0004adc8",
             "0x0000afc8",
             "-----"
           ],
@@ -20711,15 +21245,18 @@
             "33101"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20749,6 +21286,7 @@
         "mem_offset": "0x0004adc4",
         "value": {
           "ptr_hit_ok": [
+            "0x0004ad9a",
             "0x0000af9a",
             "-----"
           ],
@@ -20763,15 +21301,18 @@
             "34649"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20801,6 +21342,7 @@
         "mem_offset": "0x0004ad96",
         "value": {
           "ptr_hit_ok": [
+            "0x0004ad6c",
             "0x0000af6c",
             "-----"
           ],
@@ -20815,15 +21357,18 @@
             "02304"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20853,6 +21398,7 @@
         "mem_offset": "0x0004ad68",
         "value": {
           "ptr_hit_ok": [
+            "0x0004ad3e",
             "0x0000af3e",
             "-----"
           ],
@@ -20867,15 +21413,18 @@
             "47422"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20905,6 +21454,7 @@
         "mem_offset": "0x0004ad3a",
         "value": {
           "ptr_hit_ok": [
+            "0x0004ad10",
             "0x0000af10",
             "-----"
           ],
@@ -20919,15 +21469,18 @@
             "22266"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -20967,15 +21520,18 @@
             "16741"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -21234,10 +21790,11 @@
         "mem_offset": "0x0004b1e2",
         "value": {
           "ptr_frame_dato": [
-            "0x0000b372",
-            "-----"
+            "0x0004b172",
+            "0x0000b372"
           ],
           "ptr_hit_ok": [
+            "0x0004b1a0",
             "0x0000b3a0",
             "-----"
           ],
@@ -21301,6 +21858,7 @@
         "mem_offset": "0x0004b19c",
         "value": {
           "ptr_hit_ok": [
+            "0x0004b172",
             "0x0000b372",
             "-----"
           ],
@@ -21315,15 +21873,18 @@
             "20171"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -21353,26 +21914,31 @@
         "mem_offset": "0x0004b15a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000b0ec",
-            "-----"
+            "0x0004af60",
+            "0x0000b160"
           ],
           "ptr_hit_ok": [
+            "0x0004af60",
             "0x0000b160",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004afd4",
             "0x0000b1d4",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x0004b048",
             "0x0000b248",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
+            "0x0004b0bc",
             "0x0000b2bc",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
+            "0x0004b130",
             "0x0000b330",
             "-----"
           ],
@@ -21387,7 +21953,8 @@
             "20169"
           ],
           "ptr_frame_idk3": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -21417,10 +21984,12 @@
         "mem_offset": "0x0004b128",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004b0e6",
             "0x0000b2e6",
             "-----"
           ],
@@ -21494,15 +22063,18 @@
             "20666"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -21532,10 +22104,12 @@
         "mem_offset": "0x0004b0b4",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004b072",
             "0x0000b272",
             "-----"
           ],
@@ -21609,15 +22183,18 @@
             "20546"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -21647,10 +22224,12 @@
         "mem_offset": "0x0004b040",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004affe",
             "0x0000b1fe",
             "-----"
           ],
@@ -21724,15 +22303,18 @@
             "20449"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -21762,10 +22344,12 @@
         "mem_offset": "0x0004afcc",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004af8a",
             "0x0000b18a",
             "-----"
           ],
@@ -21839,15 +22423,18 @@
             "20355"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -21877,10 +22464,12 @@
         "mem_offset": "0x0004af58",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004af16",
             "0x0000b116",
             "-----"
           ],
@@ -21954,15 +22543,18 @@
             "20170"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -21992,10 +22584,12 @@
         "mem_offset": "0x0004aee4",
         "value": {
           "ptr_frame_dato": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004aea2",
             "0x0000b0a2",
             "-----"
           ],
@@ -22069,15 +22663,18 @@
             "20261"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -22286,10 +22883,11 @@
         "mem_offset": "0x0004b570",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b52e",
             "0x0000b72e",
             "-----"
           ],
@@ -22353,10 +22951,11 @@
         "mem_offset": "0x0004b526",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b4b2",
             "0x0000b6b2",
             "-----"
           ],
@@ -22420,10 +23019,11 @@
         "mem_offset": "0x0004b4f4",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b4b2",
             "0x0000b6b2",
             "-----"
           ],
@@ -22487,6 +23087,7 @@
         "mem_offset": "0x0004b4ae",
         "value": {
           "ptr_hit_ok": [
+            "0x0004b484",
             "0x0000b684",
             "-----"
           ],
@@ -22501,15 +23102,18 @@
             "14192"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -22539,14 +23143,17 @@
         "mem_offset": "0x0004b478",
         "value": {
           "ptr_frame_dato": [
+            "0x0004b366",
             "0x0000b566",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004b3da",
             "0x0000b5da",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004b44e",
             "0x0000b64e",
             "-----"
           ],
@@ -22561,11 +23168,13 @@
             "14192"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -22595,10 +23204,11 @@
         "mem_offset": "0x0004b446",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b404",
             "0x0000b604",
             "-----"
           ],
@@ -22672,15 +23282,18 @@
             "14691"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -22710,10 +23323,11 @@
         "mem_offset": "0x0004b3d2",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b390",
             "0x0000b590",
             "-----"
           ],
@@ -22787,15 +23401,18 @@
             "14492"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -22825,10 +23442,11 @@
         "mem_offset": "0x0004b35e",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b31c",
             "0x0000b51c",
             "-----"
           ],
@@ -22902,15 +23520,18 @@
             "14326"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -23109,10 +23730,11 @@
         "mem_offset": "0x0004b8be",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b87c",
             "0x0000ba7c",
             "-----"
           ],
@@ -23176,6 +23798,7 @@
         "mem_offset": "0x0004b878",
         "value": {
           "ptr_hit_ok": [
+            "0x0004b84e",
             "0x0000ba4e",
             "-----"
           ],
@@ -23190,15 +23813,18 @@
             "41174"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -23228,18 +23854,22 @@
         "mem_offset": "0x0004b83e",
         "value": {
           "ptr_frame_dato": [
+            "0x0004b6b8",
             "0x0000b8b8",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004b72c",
             "0x0000b92c",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004b7a0",
             "0x0000b9a0",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x0004b814",
             "0x0000ba14",
             "-----"
           ],
@@ -23254,11 +23884,13 @@
             "41174"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk2": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -23288,10 +23920,11 @@
         "mem_offset": "0x0004b80c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b7ca",
             "0x0000b9ca",
             "-----"
           ],
@@ -23365,15 +23998,18 @@
             "41718"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -23403,10 +24039,11 @@
         "mem_offset": "0x0004b798",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b756",
             "0x0000b956",
             "-----"
           ],
@@ -23480,15 +24117,18 @@
             "41599"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -23518,10 +24158,11 @@
         "mem_offset": "0x0004b724",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b6e2",
             "0x0000b8e2",
             "-----"
           ],
@@ -23595,15 +24236,18 @@
             "41461"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -23633,10 +24277,11 @@
         "mem_offset": "0x0004b6b0",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b66e",
             "0x0000b86e",
             "-----"
           ],
@@ -23710,15 +24355,18 @@
             "41300"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -23907,6 +24555,7 @@
         "mem_offset": "0x0004bb7e",
         "value": {
           "ptr_hit_ok": [
+            "0x0004bb54",
             "0x0000bd54",
             "-----"
           ],
@@ -23931,7 +24580,8 @@
             "37767"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -23961,10 +24611,11 @@
         "mem_offset": "0x0004bb4c",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004bb0a",
             "0x0000bd0a",
             "-----"
           ],
@@ -24028,10 +24679,11 @@
         "mem_offset": "0x0004bb02",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004bac0",
             "0x0000bcc0",
             "-----"
           ],
@@ -24095,10 +24747,11 @@
         "mem_offset": "0x0004bab8",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004ba76",
             "0x0000bc76",
             "-----"
           ],
@@ -24162,10 +24815,11 @@
         "mem_offset": "0x0004ba6e",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004ba2c",
             "0x0000bc2c",
             "-----"
           ],
@@ -24229,10 +24883,11 @@
         "mem_offset": "0x0004ba24",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b9b0",
             "0x0000bbb0",
             "-----"
           ],
@@ -24296,10 +24951,11 @@
         "mem_offset": "0x0004b9f2",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004b9b0",
             "0x0000bbb0",
             "-----"
           ],
@@ -24373,15 +25029,18 @@
             "39125"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -24720,10 +25379,11 @@
         "mem_offset": "0x0004c0da",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004c098",
             "0x0000c298",
             "-----"
           ],
@@ -24787,10 +25447,11 @@
         "mem_offset": "0x0004c090",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004c04e",
             "0x0000c24e",
             "-----"
           ],
@@ -24854,6 +25515,7 @@
         "mem_offset": "0x0004c04a",
         "value": {
           "ptr_hit_ok": [
+            "0x0004c020",
             "0x0000c220",
             "-----"
           ],
@@ -24868,15 +25530,18 @@
             "29555"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -24906,14 +25571,17 @@
         "mem_offset": "0x0004c014",
         "value": {
           "ptr_frame_dato": [
+            "0x0004bcaa",
             "0x0000beaa",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004bd1e",
             "0x0000bf1e",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004bfea",
             "0x0000c1ea",
             "-----"
           ],
@@ -24928,11 +25596,13 @@
             "29555"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -24962,10 +25632,11 @@
         "mem_offset": "0x0004bfe2",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004bfa0",
             "0x0000c1a0",
             "-----"
           ],
@@ -25029,10 +25700,11 @@
         "mem_offset": "0x0004bf98",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004bf56",
             "0x0000c156",
             "-----"
           ],
@@ -25096,6 +25768,7 @@
         "mem_offset": "0x0004bf52",
         "value": {
           "ptr_hit_ok": [
+            "0x0004bf28",
             "0x0000c128",
             "-----"
           ],
@@ -25110,15 +25783,18 @@
             "30125"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -25148,18 +25824,22 @@
         "mem_offset": "0x0004bf18",
         "value": {
           "ptr_frame_dato": [
+            "0x0004bd92",
             "0x0000bf92",
             "-----"
           ],
           "ptr_hit_ok": [
+            "0x0004be06",
             "0x0000c006",
             "-----"
           ],
           "ptr_frame_ko_init": [
+            "0x0004be7a",
             "0x0000c07a",
             "-----"
           ],
           "ptr_frame_ko_end": [
+            "0x0004beee",
             "0x0000c0ee",
             "-----"
           ],
@@ -25174,11 +25854,13 @@
             "30125"
           ],
           "ptr_frame_idk": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_idk2": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -25208,10 +25890,11 @@
         "mem_offset": "0x0004bee6",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004bea4",
             "0x0000c0a4",
             "-----"
           ],
@@ -25285,15 +25968,18 @@
             "30717"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -25323,10 +26009,11 @@
         "mem_offset": "0x0004be72",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004be30",
             "0x0000c030",
             "-----"
           ],
@@ -25400,15 +26087,18 @@
             "30482"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -25438,10 +26128,11 @@
         "mem_offset": "0x0004bdfe",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004bdbc",
             "0x0000bfbc",
             "-----"
           ],
@@ -25515,15 +26206,18 @@
             "30362"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -25553,10 +26247,11 @@
         "mem_offset": "0x0004bd8a",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004bd48",
             "0x0000bf48",
             "-----"
           ],
@@ -25630,15 +26325,18 @@
             "30266"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -25668,10 +26366,11 @@
         "mem_offset": "0x0004bd16",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004bcd4",
             "0x0000bed4",
             "-----"
           ],
@@ -25745,15 +26444,18 @@
             "29761"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],
@@ -25783,10 +26485,11 @@
         "mem_offset": "0x0004bca2",
         "value": {
           "ptr_frame_dato": [
-            "0x0000c9d2",
-            "-----"
+            "0x0004c7d2",
+            "0x0000c9d2"
           ],
           "ptr_hit_ok": [
+            "0x0004bc60",
             "0x0000be60",
             "-----"
           ],
@@ -25860,15 +26563,18 @@
             "29657"
           ],
           "ptr_frame_ko_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_init": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_frame_hitbox_activo_end": [
-            "0x-003fe00",
+            "0x00000000",
+            "",
             "-----"
           ],
           "ptr_hitbox": [],

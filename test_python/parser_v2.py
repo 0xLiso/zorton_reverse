@@ -153,13 +153,15 @@ class TreeLogicNode_type_0:
         }
         return result
 
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str]:
+    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
         """Formatea un puntero a frame con su valor"""
+        if mem_ptr==0x0:
+            return (f'0x{mem_ptr:08x}', "","-----")
         ptr = mem_ptr - MEMORY_OFFSET
         for x in frames_map:
             if x[0]==ptr:
                 return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{ptr:08x}', "-----")
+        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
 
 
 
@@ -226,13 +228,15 @@ class TreeLogicNode_type_1:
         }
         return result
 
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str]:
+    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
         """Formatea un puntero a frame con su valor"""
+        if mem_ptr==0x0:
+            return (f'0x{mem_ptr:08x}', "","-----")
         ptr = mem_ptr - MEMORY_OFFSET
         for x in frames_map:
             if x[0]==ptr:
                 return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{ptr:08x}', "-----")
+        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
     
     
     
@@ -277,12 +281,17 @@ class TreeLogicNode_type_2:
 
     def to_dict(self, frames_map: Dict[int, str]) -> Dict:
         """Convierte la estructura a diccionario para JSON"""
+        if  self.type_a != 0x2:
+            frame_dato =   self._format_frame_ptr(self.ptr_frame_dato, frames_map)
+        else:
+            frame_dato =  (f'0x{self.ptr_frame_dato:08x}' , f'0x{(self.ptr_frame_dato-MEMORY_OFFSET):08x}')
+        
         result = {
             'type': 'tree_logic_node_2',
             'file_offset': f'0x{self.file_offset:08x}',
             'mem_offset': f'0x{self.mem_offset:08x}',
             'value': {
-                'ptr_frame_dato':  self._format_frame_ptr(self.ptr_frame_dato, frames_map),
+                'ptr_frame_dato':  frame_dato,
                 'ptr_hit_ok':  self._format_frame_ptr(self.ptr_hit_ok, frames_map ),
                 'ptr_frame_ko_init': self._format_frame_ptr(self.ptr_frame_ko_init, frames_map),
                 'ptr_frame_ko_end': self._format_frame_ptr(self.ptr_frame_ko_end, frames_map),
@@ -300,13 +309,15 @@ class TreeLogicNode_type_2:
         }
         return result
 
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str]:
+    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
         """Formatea un puntero a frame con su valor"""
+        if mem_ptr==0x0:
+            return (f'0x{mem_ptr:08x}', "","-----")
         ptr = mem_ptr - MEMORY_OFFSET
         for x in frames_map:
             if x[0]==ptr:
                 return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{ptr:08x}', "-----")
+        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
     
     
 
@@ -375,13 +386,15 @@ class TreeLogicNode_type_3:
         }
         return result
 
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str]:
+    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
         """Formatea un puntero a frame con su valor"""
+        if mem_ptr==0x0:
+            return (f'0x{mem_ptr:08x}', "","-----")
         ptr = mem_ptr - MEMORY_OFFSET
         for x in frames_map:
             if x[0]==ptr:
                 return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{ptr:08x}', "-----")
+        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
     
     
 
@@ -453,13 +466,15 @@ class TreeLogicNode_type_4:
         }
         return result
 
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str]:
+    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
         """Formatea un puntero a frame con su valor"""
+        if mem_ptr==0x0:
+            return (f'0x{mem_ptr:08x}', "","-----")
         ptr = mem_ptr - MEMORY_OFFSET
         for x in frames_map:
             if x[0]==ptr:
                 return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{ptr:08x}', "-----")
+        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
     
     
 class TreeLogicNode_type_5:
@@ -529,13 +544,15 @@ class TreeLogicNode_type_5:
         }
         return result
 
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str]:
+    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
         """Formatea un puntero a frame con su valor"""
+        if mem_ptr==0x0:
+            return (f'0x{mem_ptr:08x}', "","-----")
         ptr = mem_ptr - MEMORY_OFFSET
         for x in frames_map:
             if x[0]==ptr:
                 return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{ptr:08x}', "-----")
+        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
     
     
     
@@ -581,12 +598,16 @@ class TreeLogicNode_type_6:
 
     def to_dict(self, frames_map: Dict[int, str]) -> Dict:
         """Convierte la estructura a diccionario para JSON"""
+        if  self.type_a==0xe:
+            frame_dato =   self._format_frame_ptr(self.ptr_frame_dato, frames_map)
+        else:
+            frame_dato =  (f'0x{self.ptr_hit_ok:08x}' , f'0x{(self.ptr_hit_ok-MEMORY_OFFSET):08x}')
         result = {
             'type': 'tree_logic_node_6',
             'file_offset': f'0x{self.file_offset:08x}',
             'mem_offset': f'0x{self.mem_offset:08x}',
             'value': {
-                'ptr_frame_dato':  self._format_frame_ptr(self.ptr_frame_dato, frames_map),
+                'ptr_frame_dato':  frame_dato,
                 'ptr_hit_ok':  self._format_frame_ptr(self.ptr_hit_ok, frames_map ),
                 'ptr_frame_ko_init': self._format_frame_ptr(self.ptr_frame_ko_init, frames_map),
                 'ptr_frame_ko_end': self._format_frame_ptr(self.ptr_frame_ko_end, frames_map),
@@ -607,13 +628,15 @@ class TreeLogicNode_type_6:
         }
         return result
 
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str]:
+    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
         """Formatea un puntero a frame con su valor"""
+        if mem_ptr==0x0:
+            return (f'0x{mem_ptr:08x}', "","-----")
         ptr = mem_ptr - MEMORY_OFFSET
         for x in frames_map:
             if x[0]==ptr:
                 return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{ptr:08x}', "-----")
+        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
     
     
 
@@ -629,7 +652,7 @@ def find_frame_sequences(data: bytes) -> List[Tuple[int, str]]:
         Lista de tuplas (offset, frame_string)
     """
     frames = []
-    sframes=[]
+    sframes=[] 
     ssize = 0
     i = 0
     n = 0 
