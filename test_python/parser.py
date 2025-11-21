@@ -59,331 +59,103 @@ class HitboxStruct:
         
     
 
-
-class TreeLogicNodeType:
+class TreeLogicNode:
     """Representa la estructura tree_logic_node con DATO inicial"""
-    SIZE = 22  
+    SIZE = int(0x2A)  # 30 bytes
+    hitbox_struct = []
+    lista_nodes = []
+    num_sequences = 0
+    is_death_and_destruction = False
+    ptr_hitbox = 0x0
 
     def __init__(self, data: bytes, file_offset: int ):
         """
         Parsea una estructura tree_logic_node desde bytes
 
         Args:
-            data: bytes conteniendo la estructura
+            data: file in bytes
             file_offset: posición en el archivo
-            binary_data: datos binarios completos para resolver punteros
         """
-        # Big-endian: 10 pointers + 10 undefined bytes + 1 int + 2 pointers
-        unpacked = struct.unpack('>14BII', data[:self.SIZE])
-
-        
-        self.fields = list(unpacked[:10])
-        self.type_a = unpacked[10]
-        self.type_b = unpacked[11]
-        self.type_chunk = unpacked[12]
-        self.type_d = unpacked[13]
-        self.ptr_fn_callback = unpacked[14]
-        self.ptr_init_struct = unpacked[15]
-
-        self.file_offset = file_offset
-        self.mem_offset = file_offset + MEMORY_OFFSET
-        self.binary_data = None
         self.hitbox_struct = []
-
-
-
-class TreeLogicNode_type_0:
-    """Representa la estructura tree_logic_node con DATO inicial"""
-    SIZE = int(22 + 5*4)  # 10 punteros (40 bytes) + 10 fields (10 bytes)
-
-    def __init__(self, data: bytes, file_offset: int ):
-        """
-        Parsea una estructura tree_logic_node desde bytes
-
-        Args:
-            data: bytes conteniendo la estructura
-            file_offset: posición en el archivo
-            binary_data: datos binarios completos para resolver punteros
-        """
-        # Big-endian: 10 pointers + 10 undefined bytes + 1 int + 2 pointers
-        unpacked = struct.unpack('>5I14BII', data[:self.SIZE])
-
-        self.ptr_hit_ok = unpacked[0]
-        self.ptr_frame_ko_init = unpacked[1]
-        self.ptr_frame_ko_end = unpacked[2]
-        self.ptr_frame_hitbox_activo_init = unpacked[3]
-        self.ptr_frame_hitbox_activo_end = unpacked[4]
-        
-        self.fields = list(unpacked[5:15])
-        self.type_a = unpacked[15]
-        self.type_b = unpacked[16]
-        self.type_chunk = unpacked[17]
-        self.type_d = unpacked[18]
-        self.ptr_fn_callback = unpacked[19]
-        self.ptr_init_struct = unpacked[20]
-
-        self.ptr_hitbox = 0x0
-        self.file_offset = file_offset
-        self.mem_offset = file_offset + MEMORY_OFFSET
-        self.binary_data = None
-        self.hitbox_struct = []
-        
-
-    def to_dict(self, frames_map: Dict[int, str]) -> Dict:
-        """Convierte la estructura a diccionario para JSON"""
-        result = {
-            'type': 'tree_logic_node_0',
-            'file_offset': f'0x{self.file_offset:08x}',
-            'mem_offset': f'0x{self.mem_offset:08x}',
-            'value': {
-                'ptr_hit_ok':  self._format_frame_ptr(self.ptr_hit_ok, frames_map ),
-                'ptr_frame_ko_init': self._format_frame_ptr(self.ptr_frame_ko_init, frames_map),
-                'ptr_frame_ko_end': self._format_frame_ptr(self.ptr_frame_ko_end, frames_map),
-                'ptr_frame_hitbox_activo_init': self._format_frame_ptr(self.ptr_frame_hitbox_activo_init, frames_map),
-                'ptr_frame_hitbox_activo_end': self._format_frame_ptr(self.ptr_frame_hitbox_activo_end, frames_map),
-                'ptr_hitbox': [x.to_dict() for x in self.hitbox_struct],
-                'fields': [hex(b) for b in self.fields],
-                'type_a': self.type_a,
-                'type_b': self.type_b,
-                'type_chunk': self.type_chunk,
-                'type_d': self.type_d,                
-                'ptr_fn_callback': f'0x{self.ptr_fn_callback:08x}',
-                'ptr_init_struct': f'0x{self.ptr_init_struct:08x}'
-            }
-        }
-        return result
-
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
-        """Formatea un puntero a frame con su valor"""
-        if mem_ptr==0x0:
-            return (f'0x{mem_ptr:08x}', "","-----")
-        ptr = mem_ptr - MEMORY_OFFSET
-        for x in frames_map:
-            if x[0]==ptr:
-                return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
-
-
-
-
-class TreeLogicNode_type_1:
-    """Representa la estructura tree_logic_node con DATO inicial"""
-    SIZE =int(22 + 6*4)# 10 punteros (40 bytes) + 10 fields (10 bytes)
-
-    def __init__(self, data: bytes, file_offset: int ):
-        """
-        Parsea una estructura tree_logic_node desde bytes
-
-        Args:
-            data: bytes conteniendo la estructura
-            file_offset: posición en el archivo
-            binary_data: datos binarios completos para resolver punteros
-        """
-        # Big-endian: 10 pointers + 10 undefined bytes + 1 int + 2 pointers
-        unpacked = struct.unpack('>6I14BII', data[:self.SIZE])
-
-        self.ptr_hit_ok = unpacked[0]
-        self.ptr_frame_ko_init = unpacked[1]
-        self.ptr_frame_ko_end = unpacked[2]
-        self.ptr_frame_hitbox_activo_init = unpacked[3]
-        self.ptr_frame_hitbox_activo_end = unpacked[4]
-        self.ptr_frame_idk = unpacked[5]
-        self.fields = list(unpacked[6:16])
-        self.type_a = unpacked[16]
-        self.type_b = unpacked[17]
-        self.type_chunk = unpacked[18]
-        self.type_d = unpacked[19]
-        self.ptr_fn_callback = unpacked[20]
-        self.ptr_init_struct = unpacked[21]
-
-        self.file_offset = file_offset
-        self.mem_offset = file_offset + MEMORY_OFFSET
-        self.binary_data = None
-        self.hitbox_struct = []
+        self.lista_nodes = []
+        self.num_sequences = 0
+        self.is_death_and_destruction = False
         self.ptr_hitbox = 0x0
         
-
-    def to_dict(self, frames_map: Dict[int, str]) -> Dict:
-        """Convierte la estructura a diccionario para JSON"""
-        result = {
-            'type': 'tree_logic_node_1',
-            'file_offset': f'0x{self.file_offset:08x}',
-            'mem_offset': f'0x{self.mem_offset:08x}',
-            'value': {
-                'ptr_hit_ok':   self._format_frame_ptr(self.ptr_hit_ok, frames_map ),
-                'ptr_frame_ko_init': self._format_frame_ptr(self.ptr_frame_ko_init, frames_map),
-                'ptr_frame_ko_end': self._format_frame_ptr(self.ptr_frame_ko_end, frames_map),
-                'ptr_frame_hitbox_activo_init': self._format_frame_ptr(self.ptr_frame_hitbox_activo_init, frames_map),
-                'ptr_frame_hitbox_activo_end': self._format_frame_ptr(self.ptr_frame_hitbox_activo_end, frames_map),
-                'ptr_frame_idk':self._format_frame_ptr(self.ptr_frame_idk, frames_map),
-                'ptr_hitbox': [x.to_dict() for x in self.hitbox_struct],
-                'fields': [hex(b) for b in self.fields],
-                'type_a': self.type_a,
-                'type_b': self.type_b,
-                'type_chunk': self.type_chunk,
-                'type_d': self.type_d,                
-                'ptr_fn_callback': f'0x{self.ptr_fn_callback:08x}',
-                'ptr_init_struct': f'0x{self.ptr_init_struct:08x}'
-            }
-        }
-        return result
-
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
-        """Formatea un puntero a frame con su valor"""
-        if mem_ptr==0x0:
-            return (f'0x{mem_ptr:08x}', "","-----")
-        ptr = mem_ptr - MEMORY_OFFSET
-        for x in frames_map:
-            if x[0]==ptr:
-                return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
-    
-    
-    
-
-
-
-class TreeLogicNode_type_2:
-    """Representa la estructura tree_logic_node con DATO inicial"""
-    SIZE = int(int(22 + 7*4))  # 10 punteros (40 bytes) + 10 fields (10 bytes)
-
-    def __init__(self, data: bytes, file_offset: int ):
-        """
-        Parsea una estructura tree_logic_node desde bytes
-
-        Args:
-            data: bytes conteniendo la estructura
-            file_offset: posición en el archivo
-            binary_data: datos binarios completos para resolver punteros
-        """
-        # Big-endian: 10 pointers + 10 undefined bytes + 1 int + 2 pointers
-        unpacked = struct.unpack('>7I14BII', data[:self.SIZE])
-        self.ptr_frame_dato = unpacked[0]
-        self.ptr_hit_ok = unpacked[1]
-        self.ptr_frame_ko_init = unpacked[2]
-        self.ptr_frame_ko_end = unpacked[3]
-        self.ptr_frame_hitbox_activo_init = unpacked[4]
-        self.ptr_frame_hitbox_activo_end = unpacked[5]
-        self.ptr_hitbox = unpacked[6]
-        self.fields = list(unpacked[7:17])
-        self.type_a = unpacked[17]
-        self.type_b = unpacked[18]
-        self.type_chunk = unpacked[19]
-        self.type_d = unpacked[20]
-        self.ptr_fn_callback = unpacked[21]
-        self.ptr_init_struct = unpacked[22]
-
         self.file_offset = file_offset
         self.mem_offset = file_offset + MEMORY_OFFSET
-        self.binary_data = None
-        self.hitbox_struct = []
+        self.ptr_node_respawn=0x0
         
-
-    def to_dict(self, frames_map: Dict[int, str]) -> Dict:
-        """Convierte la estructura a diccionario para JSON"""
-        if  self.type_a != 0x2:
-            frame_dato =   self._format_frame_ptr(self.ptr_frame_dato, frames_map)
-        else:
-            frame_dato =  (f'0x{self.ptr_frame_dato:08x}' , f'0x{(self.ptr_frame_dato-MEMORY_OFFSET):08x}')
+        if file_offset== 0xc9d2 or (file_offset+MEMORY_OFFSET)==0x4c7d2:
+            self.is_death_and_destruction = True
+            return
+        start_pos = data[file_offset:]
         
-        result = {
-            'type': 'tree_logic_node_2',
-            'file_offset': f'0x{self.file_offset:08x}',
-            'mem_offset': f'0x{self.mem_offset:08x}',
-            'value': {
-                'ptr_frame_dato':  frame_dato,
-                'ptr_hit_ok':  self._format_frame_ptr(self.ptr_hit_ok, frames_map ),
-                'ptr_frame_ko_init': self._format_frame_ptr(self.ptr_frame_ko_init, frames_map),
-                'ptr_frame_ko_end': self._format_frame_ptr(self.ptr_frame_ko_end, frames_map),
-                'ptr_frame_hitbox_activo_init': self._format_frame_ptr(self.ptr_frame_hitbox_activo_init, frames_map),
-                'ptr_frame_hitbox_activo_end': self._format_frame_ptr(self.ptr_frame_hitbox_activo_end, frames_map),
-                'ptr_hitbox': [x.to_dict() for x in self.hitbox_struct],
-                'fields': [hex(b) for b in self.fields],
-                'type_a': self.type_a,
-                'type_b': self.type_b,
-                'type_chunk': self.type_chunk,
-                'type_d': self.type_d,                
-                'ptr_fn_callback': f'0x{self.ptr_fn_callback:08x}',
-                'ptr_init_struct': f'0x{self.ptr_init_struct:08x}'
-            }
-        }
-        return result
-
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
-        """Formatea un puntero a frame con su valor"""
-        if mem_ptr==0x0:
-            return (f'0x{mem_ptr:08x}', "","-----")
-        ptr = mem_ptr - MEMORY_OFFSET
-        for x in frames_map:
-            if x[0]==ptr:
-                return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
-    
-    
-
-
-
-class TreeLogicNode_type_3:
-    """Representa la estructura tree_logic_node con DATO inicial"""
-    SIZE = int(int(22 + 8*4))  # 10 punteros (40 bytes) + 10 fields (10 bytes)
-
-    def __init__(self, data: bytes, file_offset: int ):
-        """
-        Parsea una estructura tree_logic_node desde bytes
-
-        Args:
-            data: bytes conteniendo la estructura
-            file_offset: posición en el archivo
-            binary_data: datos binarios completos para resolver punteros
-        """
         # Big-endian: 10 pointers + 10 undefined bytes + 1 int + 2 pointers
-        unpacked = struct.unpack('>8I14BII', data[:self.SIZE])
-        self.ptr_frame_dato = unpacked[0]
-        self.ptr_hit_ok = unpacked[1]
-        self.ptr_frame_ko_init = unpacked[2]
-        self.ptr_frame_ko_end = unpacked[3]
-        self.ptr_frame_hitbox_activo_init = unpacked[4]
-        self.ptr_frame_hitbox_activo_end = unpacked[5]
-        self.ptr_frame_idk = unpacked[6]
-        self.ptr_hitbox = unpacked[7]
-        self.fields = list(unpacked[8:18])
-        self.type_a = unpacked[18]
-        self.type_b = unpacked[19]
-        self.type_chunk = unpacked[20]
-        self.type_d = unpacked[21]
-        self.ptr_fn_callback = unpacked[22]
-        self.ptr_init_struct = unpacked[23]
+        unpacked = struct.unpack('>7I6BII', start_pos[:self.SIZE])
 
-        self.file_offset = file_offset
-        self.mem_offset = file_offset + MEMORY_OFFSET
-        self.binary_data = None
-        self.hitbox_struct = []
+        self.ptr_frame_start = unpacked[0]
+        self.ptr_frame_end = unpacked[1]
+        self.ptr_frame_hitbox_start = unpacked[2]
+        self.ptr_frame_hitbox_end = unpacked[3]
+        self.ptr_hitbox = unpacked[4]
+        self.ptr_frame_unk = unpacked[5]
+        self.ptr_node_respawn = unpacked[6]
         
+        self.fields = list(unpacked[7:9])
+        self.type_a = unpacked[9]
+        self.type_b = unpacked[10]
+        self.num_sequences = unpacked[11]
+        self.type_d = unpacked[12]
+        self.ptr_fn_callback = unpacked[13]
+        self.ptr_list_sequences = unpacked[14]
+
+       
+
+        
+        if self.ptr_list_sequences!=0x0 and self.num_sequences!=0:
+            seq_init = self.ptr_list_sequences-MEMORY_OFFSET
+            
+            unpacked = struct.unpack(f'>{self.num_sequences}I', data[seq_init:seq_init+4*self.num_sequences])
+            for p in unpacked:
+                self.lista_nodes.append(p)
+           
+            
 
     def to_dict(self, frames_map: Dict[int, str]) -> Dict:
         """Convierte la estructura a diccionario para JSON"""
-        result = {
-            'type': 'tree_logic_node_3',
-            'file_offset': f'0x{self.file_offset:08x}',
+        if self.is_death_and_destruction:
+            result = {
+            'type': "death_and_destruction☠️",
             'mem_offset': f'0x{self.mem_offset:08x}',
-            'value': {
-                'ptr_frame_dato':  self._format_frame_ptr(self.ptr_frame_dato, frames_map),
-                'ptr_hit_ok':  self._format_frame_ptr(self.ptr_hit_ok, frames_map ),
-                'ptr_frame_ko_init': self._format_frame_ptr(self.ptr_frame_ko_init, frames_map),
-                'ptr_frame_ko_end': self._format_frame_ptr(self.ptr_frame_ko_end, frames_map),
-                'ptr_frame_hitbox_activo_init': self._format_frame_ptr(self.ptr_frame_hitbox_activo_init, frames_map),
-                'ptr_frame_hitbox_activo_end': self._format_frame_ptr(self.ptr_frame_hitbox_activo_end, frames_map),
-                'ptr_frame_idk': self._format_frame_ptr(self.ptr_frame_idk, frames_map),
-                'ptr_hitbox': [x.to_dict() for x in self.hitbox_struct],
-                'fields': [hex(b) for b in self.fields],
-                'type_a': self.type_a,
-                'type_b': self.type_b,
-                'type_chunk': self.type_chunk,
-                'type_d': self.type_d,                
-                'ptr_fn_callback': f'0x{self.ptr_fn_callback:08x}',
-                'ptr_init_struct': f'0x{self.ptr_init_struct:08x}'
+            'file_offset': f'0x{self.file_offset:08x}',
+            'value': {"death":"destruction"}
             }
-        }
+        else: 
+            result = {
+                'type': 'tree_logic_node' if not self.is_death_and_destruction else "death_and_destruction☠️",
+                'mem_offset': f'0x{self.mem_offset:08x}',
+                'file_offset': f'0x{self.file_offset:08x}',
+                'value': {
+                    'ptr_frame_start':  self._format_frame_ptr(self.ptr_frame_start, frames_map),
+                    'ptr_frame_end':  self._format_frame_ptr(self.ptr_frame_end, frames_map),
+                    'ptr_frame_hitbox_start':  self._format_frame_ptr(self.ptr_frame_hitbox_start, frames_map),
+                    'ptr_frame_hitbox_end':  self._format_frame_ptr(self.ptr_frame_hitbox_end, frames_map),
+                    'ptr_hitbox':  f'0x{self.ptr_hitbox:08x}',
+                    'ptr_frame_unk':  self._format_frame_ptr(self.ptr_frame_unk, frames_map),
+                    'ptr_node_respawn':f'0x{self.ptr_node_respawn:08x}',
+                    'fields': [hex(b) for b in self.fields],
+                    'type_a': self.type_a,
+                    'type_b': self.type_b,
+                    'num_sequences': self.num_sequences,
+                    'type_d': self.type_d,      
+                    'ptr_fn_callback': f'0x{self.ptr_fn_callback:08x}',
+                    'lista_hitboxes': [x.to_dict() for x in self.hitbox_struct],
+                    
+                    'sequences': [ f'0x{p:08x}' for p in self.lista_nodes]
+                    
+                }
+            }
         return result
 
     def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
@@ -395,250 +167,6 @@ class TreeLogicNode_type_3:
             if x[0]==ptr:
                 return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
         return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
-    
-    
-
-
-
-
-class TreeLogicNode_type_4:
-    """Representa la estructura tree_logic_node con DATO inicial"""
-    SIZE = int(int(22 + 9*4))  # 10 punteros (40 bytes) + 10 fields (10 bytes)
-
-    def __init__(self, data: bytes, file_offset: int ):
-        """
-        Parsea una estructura tree_logic_node desde bytes
-
-        Args:
-            data: bytes conteniendo la estructura
-            file_offset: posición en el archivo
-            binary_data: datos binarios completos para resolver punteros
-        """
-        # Big-endian: 10 pointers + 10 undefined bytes + 1 int + 2 pointers
-        unpacked = struct.unpack('>9I14BII', data[:self.SIZE])
-        self.ptr_frame_dato = unpacked[0]
-        self.ptr_hit_ok = unpacked[1]
-        self.ptr_frame_ko_init = unpacked[2]
-        self.ptr_frame_ko_end = unpacked[3]
-        self.ptr_frame_hitbox_activo_init = unpacked[4]
-        self.ptr_frame_hitbox_activo_end = unpacked[5]
-        self.ptr_frame_idk = unpacked[6]
-        self.ptr_frame_idk2 = unpacked[7]
-        self.ptr_hitbox = unpacked[8]
-        self.fields = list(unpacked[9:19])
-        self.type_a = unpacked[19]
-        self.type_b = unpacked[20]
-        self.type_chunk = unpacked[21]
-        self.type_d = unpacked[22]
-        self.ptr_fn_callback = unpacked[23]
-        self.ptr_init_struct = unpacked[24]
-
-        self.file_offset = file_offset
-        self.mem_offset = file_offset + MEMORY_OFFSET
-        self.binary_data = None
-        self.hitbox_struct = []
-        
-
-    def to_dict(self, frames_map: Dict[int, str]) -> Dict:
-        """Convierte la estructura a diccionario para JSON"""
-        result = {
-            'type': 'tree_logic_node_4',
-            'file_offset': f'0x{self.file_offset:08x}',
-            'mem_offset': f'0x{self.mem_offset:08x}',
-            'value': {
-                'ptr_frame_dato':  self._format_frame_ptr(self.ptr_frame_dato, frames_map),
-                'ptr_hit_ok':  self._format_frame_ptr(self.ptr_hit_ok, frames_map ),
-                'ptr_frame_ko_init': self._format_frame_ptr(self.ptr_frame_ko_init, frames_map),
-                'ptr_frame_ko_end': self._format_frame_ptr(self.ptr_frame_ko_end, frames_map),
-                'ptr_frame_hitbox_activo_init': self._format_frame_ptr(self.ptr_frame_hitbox_activo_init, frames_map),
-                'ptr_frame_hitbox_activo_end': self._format_frame_ptr(self.ptr_frame_hitbox_activo_end, frames_map),
-                'ptr_frame_idk': self._format_frame_ptr(self.ptr_frame_idk, frames_map),
-                'ptr_frame_idk2': self._format_frame_ptr(self.ptr_frame_idk2, frames_map),
-                'ptr_hitbox': [x.to_dict() for x in self.hitbox_struct],
-                'fields': [hex(b) for b in self.fields],
-                'type_a': self.type_a,
-                'type_b': self.type_b,
-                'type_chunk': self.type_chunk,
-                'type_d': self.type_d,                
-                'ptr_fn_callback': f'0x{self.ptr_fn_callback:08x}',
-                'ptr_init_struct': f'0x{self.ptr_init_struct:08x}'
-            }
-        }
-        return result
-
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
-        """Formatea un puntero a frame con su valor"""
-        if mem_ptr==0x0:
-            return (f'0x{mem_ptr:08x}', "","-----")
-        ptr = mem_ptr - MEMORY_OFFSET
-        for x in frames_map:
-            if x[0]==ptr:
-                return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
-    
-    
-class TreeLogicNode_type_5:
-    """Representa la estructura tree_logic_node con DATO inicial"""
-    SIZE = int(int(22 + 10*4))  # 10 punteros (40 bytes) + 10 fields (10 bytes)
-
-    def __init__(self, data: bytes, file_offset: int ):
-        """
-        Parsea una estructura tree_logic_node desde bytes
-
-        Args:
-            data: bytes conteniendo la estructura
-            file_offset: posición en el archivo
-            binary_data: datos binarios completos para resolver punteros
-        """
-        # Big-endian: 10 pointers + 10 undefined bytes + 1 int + 2 pointers
-        unpacked = struct.unpack('>10I14BII', data[:self.SIZE])
-        self.ptr_frame_dato = unpacked[0]
-        self.ptr_hit_ok = unpacked[1]
-        self.ptr_frame_ko_init = unpacked[2]
-        self.ptr_frame_ko_end = unpacked[3]
-        self.ptr_frame_hitbox_activo_init = unpacked[4]
-        self.ptr_frame_hitbox_activo_end = unpacked[5]
-        self.ptr_frame_idk = unpacked[6]
-        self.ptr_frame_idk2 = unpacked[7]
-        self.ptr_frame_idk3 = unpacked[8]
-        self.ptr_hitbox = unpacked[9]
-        self.fields = list(unpacked[10:20])
-        self.type_a = unpacked[20]
-        self.type_b = unpacked[21]
-        self.type_chunk = unpacked[22]
-        self.type_d = unpacked[23]
-        self.ptr_fn_callback = unpacked[24]
-        self.ptr_init_struct = unpacked[25]
-
-        self.file_offset = file_offset
-        self.mem_offset = file_offset + MEMORY_OFFSET
-        self.binary_data = None
-        self.hitbox_struct = []
-        
-
-    def to_dict(self, frames_map: Dict[int, str]) -> Dict:
-        """Convierte la estructura a diccionario para JSON"""
-        result = {
-            'type': 'tree_logic_node_5',
-            'file_offset': f'0x{self.file_offset:08x}',
-            'mem_offset': f'0x{self.mem_offset:08x}',
-            'value': {
-                'ptr_frame_dato':  self._format_frame_ptr(self.ptr_frame_dato, frames_map),
-                'ptr_hit_ok':  self._format_frame_ptr(self.ptr_hit_ok, frames_map ),
-                'ptr_frame_ko_init': self._format_frame_ptr(self.ptr_frame_ko_init, frames_map),
-                'ptr_frame_ko_end': self._format_frame_ptr(self.ptr_frame_ko_end, frames_map),
-                'ptr_frame_hitbox_activo_init': self._format_frame_ptr(self.ptr_frame_hitbox_activo_init, frames_map),
-                'ptr_frame_hitbox_activo_end': self._format_frame_ptr(self.ptr_frame_hitbox_activo_end, frames_map),
-                'ptr_frame_idk': self._format_frame_ptr(self.ptr_frame_idk, frames_map),
-                'ptr_frame_idk2': self._format_frame_ptr(self.ptr_frame_idk2, frames_map),
-                'ptr_frame_idk3': self._format_frame_ptr(self.ptr_frame_idk3, frames_map),
-                'ptr_hitbox': [x.to_dict() for x in self.hitbox_struct],
-                'fields': [hex(b) for b in self.fields],
-                'type_a': self.type_a,
-                'type_b': self.type_b,
-                'type_chunk': self.type_chunk,
-                'type_d': self.type_d,                
-                'ptr_fn_callback': f'0x{self.ptr_fn_callback:08x}',
-                'ptr_init_struct': f'0x{self.ptr_init_struct:08x}'
-            }
-        }
-        return result
-
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
-        """Formatea un puntero a frame con su valor"""
-        if mem_ptr==0x0:
-            return (f'0x{mem_ptr:08x}', "","-----")
-        ptr = mem_ptr - MEMORY_OFFSET
-        for x in frames_map:
-            if x[0]==ptr:
-                return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
-    
-    
-    
-class TreeLogicNode_type_6:
-    """Representa la estructura tree_logic_node con DATO inicial"""
-    SIZE = int(int(22 + 11*4))  # 10 punteros (40 bytes) + 10 fields (10 bytes)
-
-    def __init__(self, data: bytes, file_offset: int ):
-        """
-        Parsea una estructura tree_logic_node desde bytes
-
-        Args:
-            data: bytes conteniendo la estructura
-            file_offset: posición en el archivo
-            binary_data: datos binarios completos para resolver punteros
-        """
-        # Big-endian: 10 pointers + 10 undefined bytes + 1 int + 2 pointers
-        unpacked = struct.unpack('>11I14BII', data[:self.SIZE])
-        self.ptr_frame_dato = unpacked[0]
-        self.ptr_hit_ok = unpacked[1]
-        self.ptr_frame_ko_init = unpacked[2]
-        self.ptr_frame_ko_end = unpacked[3]
-        self.ptr_frame_hitbox_activo_init = unpacked[4]
-        self.ptr_frame_hitbox_activo_end = unpacked[5]
-        self.ptr_frame_idk = unpacked[6]
-        self.ptr_frame_idk2 = unpacked[7]
-        self.ptr_frame_idk3 = unpacked[8]
-        self.ptr_frame_idk4 = unpacked[9]
-        self.ptr_hitbox = unpacked[10]
-        self.fields = list(unpacked[11:21])
-        self.type_a = unpacked[21]
-        self.type_b = unpacked[22]
-        self.type_chunk = unpacked[23]
-        self.type_d = unpacked[24]
-        self.ptr_fn_callback = unpacked[25]
-        self.ptr_init_struct = unpacked[26]
-
-        self.file_offset = file_offset
-        self.mem_offset = file_offset + MEMORY_OFFSET
-        self.binary_data = None
-        self.hitbox_struct = []
-        
-
-    def to_dict(self, frames_map: Dict[int, str]) -> Dict:
-        """Convierte la estructura a diccionario para JSON"""
-        if  self.type_a==0xe:
-            frame_dato =   self._format_frame_ptr(self.ptr_frame_dato, frames_map)
-        else:
-            frame_dato =  (f'0x{self.ptr_hit_ok:08x}' , f'0x{(self.ptr_hit_ok-MEMORY_OFFSET):08x}')
-        result = {
-            'type': 'tree_logic_node_6',
-            'file_offset': f'0x{self.file_offset:08x}',
-            'mem_offset': f'0x{self.mem_offset:08x}',
-            'value': {
-                'ptr_frame_dato':  frame_dato,
-                'ptr_hit_ok':  self._format_frame_ptr(self.ptr_hit_ok, frames_map ),
-                'ptr_frame_ko_init': self._format_frame_ptr(self.ptr_frame_ko_init, frames_map),
-                'ptr_frame_ko_end': self._format_frame_ptr(self.ptr_frame_ko_end, frames_map),
-                'ptr_frame_hitbox_activo_init': self._format_frame_ptr(self.ptr_frame_hitbox_activo_init, frames_map),
-                'ptr_frame_hitbox_activo_end': self._format_frame_ptr(self.ptr_frame_hitbox_activo_end, frames_map),
-                'ptr_frame_idk': self._format_frame_ptr(self.ptr_frame_idk, frames_map),
-                'ptr_frame_idk2': self._format_frame_ptr(self.ptr_frame_idk2, frames_map),
-                'ptr_frame_idk3': self._format_frame_ptr(self.ptr_frame_idk3, frames_map),
-                'ptr_hitbox': [x.to_dict() for x in self.hitbox_struct],
-                'fields': [hex(b) for b in self.fields],
-                'type_a': self.type_a,
-                'type_b': self.type_b,
-                'type_chunk': self.type_chunk,
-                'type_d': self.type_d,                
-                'ptr_fn_callback': f'0x{self.ptr_fn_callback:08x}',
-                'ptr_init_struct': f'0x{self.ptr_init_struct:08x}'
-            }
-        }
-        return result
-
-    def _format_frame_ptr(self, mem_ptr: int, frames_map: Dict[int, str]) -> Tuple[str, str,str]:
-        """Formatea un puntero a frame con su valor"""
-        if mem_ptr==0x0:
-            return (f'0x{mem_ptr:08x}', "","-----")
-        ptr = mem_ptr - MEMORY_OFFSET
-        for x in frames_map:
-            if x[0]==ptr:
-                return (f'0x{mem_ptr:08x}', f'0x{ptr:08x}', x[1])
-        return (f'0x{mem_ptr:08x}',f'0x{ptr:08x}', "-----")
-    
-    
 
 
 def find_frame_sequences(data: bytes) -> List[Tuple[int, str]]:
@@ -710,33 +238,20 @@ def detect_chunks(data: bytes, frames: List[Tuple[int, str]]) -> List[Dict]:
     last_offset = -1
     offset = frames[0][0]
     
+    offset_nodes = [offset-TreeLogicNode.SIZE]
 
-    while True:
-        chunk_start = offset
-        chunk_info = TreeLogicNodeType(data[chunk_start-TreeLogicNodeType.SIZE:],chunk_start-TreeLogicNodeType.SIZE)
-       
-        new_struct = None
-        if chunk_info.type_chunk == 0:
-            new_struct= TreeLogicNode_type_0(data[chunk_start-TreeLogicNode_type_0.SIZE:],chunk_start-TreeLogicNode_type_0.SIZE)
-        elif chunk_info.type_chunk == 1:
-            new_struct= TreeLogicNode_type_1(data[chunk_start-TreeLogicNode_type_1.SIZE:],chunk_start-TreeLogicNode_type_1.SIZE)
-        elif chunk_info.type_chunk == 2:
-            new_struct= TreeLogicNode_type_2(data[chunk_start-TreeLogicNode_type_2.SIZE:],chunk_start-TreeLogicNode_type_2.SIZE)
-        elif chunk_info.type_chunk == 3:
-            new_struct= TreeLogicNode_type_3(data[chunk_start-TreeLogicNode_type_3.SIZE:],chunk_start-TreeLogicNode_type_3.SIZE)
-        elif chunk_info.type_chunk == 4:
-            new_struct= TreeLogicNode_type_4(data[chunk_start-TreeLogicNode_type_4.SIZE:],chunk_start-TreeLogicNode_type_4.SIZE)
-        elif chunk_info.type_chunk == 5:
-            new_struct= TreeLogicNode_type_5(data[chunk_start-TreeLogicNode_type_5.SIZE:],chunk_start-TreeLogicNode_type_5.SIZE)
-        elif chunk_info.type_chunk == 6:
-            new_struct= TreeLogicNode_type_6(data[chunk_start-TreeLogicNode_type_6.SIZE:],chunk_start-TreeLogicNode_type_6.SIZE)
-        else:
-            if  chunk_info.type_chunk<10:
-                print(f"puede que este sea un chund? {chunk_info.type_chunk} en {hex(offset+MEMORY_OFFSET)}")
-            break
-            #raise ValueError(f"Estructura desconocida en offset 0x{chunk_start:08x} con type {chunk_info.type_chunk } ")
+    while len(offset_nodes)>0:
+        chunk_start = offset_nodes.pop() 
+        new_struct = TreeLogicNode(data,chunk_start)
+        for p in new_struct.lista_nodes:
+            if p==0:
+                print("WAT")
+                continue
+            offset_nodes.insert(0,p- MEMORY_OFFSET)
+            
+        if new_struct.ptr_node_respawn!=0x0:
+            offset_nodes.insert(0,new_struct.ptr_node_respawn- MEMORY_OFFSET)
         
-        chunk_start-=new_struct.SIZE
         
         if new_struct.ptr_hitbox !=0:
             hitbox_file_offset = new_struct.ptr_hitbox - MEMORY_OFFSET
@@ -748,7 +263,6 @@ def detect_chunks(data: bytes, frames: List[Tuple[int, str]]) -> List[Dict]:
                     )
                     new_struct.hitbox_struct.append(new_hitbox)
                     #buscar hitbox linked list
-                    tmp_chunk_start=hitbox_file_offset
                     while new_hitbox.ptr_next_hitbox !=0:
                         next_hitbox_file_offset = new_hitbox.ptr_next_hitbox - MEMORY_OFFSET
                         if 0 <= next_hitbox_file_offset < len(data) - HitboxStruct.SIZE:
@@ -757,12 +271,8 @@ def detect_chunks(data: bytes, frames: List[Tuple[int, str]]) -> List[Dict]:
                                 next_hitbox_file_offset
                             )
                             new_struct.hitbox_struct.append(new_hitbox)
-                            tmp_chunk_start=next_hitbox_file_offset
                         else:
                             raise ValueError("Error al parsear hitbox linked list")
-                    previous_ptr = struct.unpack('>I', data[chunk_start-4:chunk_start])[0]
-                    if previous_ptr & 0xffff0000 == 0:
-                        chunk_start=tmp_chunk_start
                 except:
                     raise ValueError("Error al parsear hitbox")
         
@@ -771,15 +281,14 @@ def detect_chunks(data: bytes, frames: List[Tuple[int, str]]) -> List[Dict]:
                     "data_struct": new_struct                   
                     
                 })
-        #move offset to next struct
-        offset = chunk_start
+      
            
 
     return chunks
 
 
 
-def parse_binary(binary_path: str) -> List[Dict]:
+def parse_binary(binary_path: str) -> Dict :
     """
     Parsea el archivo binario completo y extrae todos los chunks
 
@@ -811,6 +320,8 @@ def parse_binary(binary_path: str) -> List[Dict]:
     full_chunks = []
     chunk_id = 0
     result = []
+    list_chunks = []
+    list_frames = []
     for frame in frames:
         print(f"Frame en offset 0x{frame[0][0]:08x}: {frame[0][1]}")
         chunks = detect_chunks(data, frame)
@@ -826,10 +337,32 @@ def parse_binary(binary_path: str) -> List[Dict]:
             'nodes': [p['data_struct'].to_dict(frame) for p in chunks]
         }
         chunk_id += 1
-
+        for p in chunks:
+            list_chunks.append(p['data_struct'].mem_offset)
+        for f in frame:
+            list_frames.append(f)
         result.append(chunk_dict)
+        
+    # read full list of scenes
+    # 0x0c4daa -> inicio de la lista a escenas.   44 ptrs
+    init_list_scenes = int(0x0c4daa - MEMORY_OFFSET )&0x0000ffff
+    buf = data[init_list_scenes:init_list_scenes+(44*4)]
+    unpacked = struct.unpack('>44I', buf)
+    scenes = [ p for p in unpacked]
+    spare = []
+    to_add = [ p for p in unpacked]
+    # we need to fine tune this parse. We should read the list of sequences related and the hitboxes. 
+    # I did not implement it to speed up the json creation, and also 
+    # the num_sequences seems to be always 0.
+    while len(to_add)>0:
+        p = to_add.pop()
+        if p not in list_chunks:
+            init_pos = p - MEMORY_OFFSET
+            new_struct = TreeLogicNode(data,init_pos)
+            spare.append(new_struct.to_dict(list_frames))
+            
 
-    return result
+    return {"scene_order":[f"0x{p:08x}" for p in scenes], "chunks":result, "spare_chunks":spare }
 
 
 def main():
@@ -856,3 +389,6 @@ def main():
 
 if __name__ == '__main__':
     main()
+
+
+# 0x0c4daa -> inicio de la lista a escenas.   44 ptrs

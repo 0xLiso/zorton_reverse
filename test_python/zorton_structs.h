@@ -178,3 +178,16 @@ struct tree_logic_node_type_4{
 
 
 }
+
+{
+    pointer ptr01;
+    pointer ptr02;
+    
+    byte end_chunk[24];
+    
+    byte num_elementos;
+    byte type_d;
+    pointer callback;
+    pointer ptr_inicio_lista;
+
+}
