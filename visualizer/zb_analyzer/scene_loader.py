@@ -99,6 +99,9 @@ class SceneDataLoader:
             node = mem_map[mem]
             val = node.get("value", {})
 
+            hitbox_frame_start = self._frame_val(val.get("ptr_frame_hitbox_start"))
+            hitbox_frame_end = self._frame_val(val.get("ptr_frame_hitbox_end"))
+
             # extraer info del nodo
             step = {
                 "mem": mem,
@@ -108,6 +111,8 @@ class SceneDataLoader:
             }
 
             # extraer hitboxes
+            # los frames vienen del nodo, no del hitbox, se pasan aquí
+            # para facilitar la carga en el visualizador
             for item in val.get("lista_hitboxes", []):
                 hb = item.get("hitbox", {})
                 if hb:
@@ -118,6 +123,8 @@ class SceneDataLoader:
                             "x1": hb.get("x1", 0),
                             "y1": hb.get("y1", 0),
                             "points": hb.get("score", 0),
+                            "frame_start": hitbox_frame_start,
+                            "frame_end": hitbox_frame_end,
                         }
                     )
 
