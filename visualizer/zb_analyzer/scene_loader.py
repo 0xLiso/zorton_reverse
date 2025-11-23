@@ -102,11 +102,16 @@ class SceneDataLoader:
             hitbox_frame_start = self._frame_val(val.get("ptr_frame_hitbox_start"))
             hitbox_frame_end = self._frame_val(val.get("ptr_frame_hitbox_end"))
 
+            ptr_node_respawn = val.get("ptr_node_respawn", "0x00000000")
+
             # extraer info del nodo
             step = {
                 "mem": mem,
                 "frame_start": self._frame_val(val.get("ptr_frame_start")),
                 "frame_end": self._frame_val(val.get("ptr_frame_end")),
+                "ptr_node_respawn": ptr_node_respawn
+                if ptr_node_respawn != "0x00000000"
+                else None,
                 "hitboxes": [],
             }
 
