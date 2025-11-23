@@ -255,7 +255,9 @@ class MainWindow(QMainWindow):
         scroll.setWidget(self.checkbox_widget)
         scroll.setWidgetResizable(True)
 
-        self.hitbox_manager = HitboxManager(self.checkbox_layout, self.video_widget)
+        self.hitbox_manager = HitboxManager(
+            self.checkbox_layout, self.video_widget, self.play_frame_loop
+        )
 
         # conectar controles de hitboxes
         self.hitbox_controls.connect_select_buttons(

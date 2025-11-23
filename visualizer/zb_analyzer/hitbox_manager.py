@@ -109,7 +109,7 @@ Alto: {alto} px"""
         ):
             play_btn = QPushButton(f"▶ {frame_start}-{frame_end}")
             # print(f"Botón para frames {frame_start}-{frame_end}")
-            play_btn.setFixedWidth(30)
+            play_btn.setFixedWidth(120)
             play_btn.setToolTip(f"Reproducir frames {frame_start}-{frame_end}")
             play_btn.setStyleSheet("""
                 QPushButton {
