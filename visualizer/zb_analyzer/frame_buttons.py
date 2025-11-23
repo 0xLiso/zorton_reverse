@@ -50,7 +50,7 @@ class FrameButtonManager:
 
         self.path_nav_layout = QHBoxLayout()
 
-        prev_path_btn = QPushButton("◀ Path Anterior")
+        prev_path_btn = QPushButton("⬅ Path Anterior")
         prev_path_btn.clicked.connect(self._prev_path)
         self.path_nav_layout.addWidget(prev_path_btn)
 
@@ -58,7 +58,7 @@ class FrameButtonManager:
         self.path_label.setStyleSheet("text-align: center; padding: 5px;")
         self.path_nav_layout.addWidget(self.path_label, 1)
 
-        next_path_btn = QPushButton("Path Siguiente ▶")
+        next_path_btn = QPushButton("Path Siguiente ➡️")
         next_path_btn.clicked.connect(self._next_path)
         self.path_nav_layout.addWidget(next_path_btn)
 
@@ -76,7 +76,7 @@ class FrameButtonManager:
 
         self.node_nav_layout = QHBoxLayout()
 
-        prev_node_btn = QPushButton("◀ Nodo Anterior")
+        prev_node_btn = QPushButton("⬅ Nodo Anterior")
         prev_node_btn.clicked.connect(self._prev_node)
         self.node_nav_layout.addWidget(prev_node_btn)
 
@@ -84,7 +84,7 @@ class FrameButtonManager:
         self.node_label.setStyleSheet("text-align: center; padding: 5px;")
         self.node_nav_layout.addWidget(self.node_label, 1)
 
-        next_node_btn = QPushButton("Nodo Siguiente ▶")
+        next_node_btn = QPushButton("Nodo Siguiente ➡️")
         next_node_btn.clicked.connect(self._next_node)
         self.node_nav_layout.addWidget(next_node_btn)
 

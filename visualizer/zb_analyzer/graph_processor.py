@@ -4,7 +4,7 @@ import networkx as nx
 class GraphProcessor:
     """Procesador de grafos de secuencias de animación usando NetworkX"""
 
-    TERMINATION_ADDRESSES = ["0x00000000", "0x0004c7d2"]
+    TERMINATION_ADDRESSES = ["0x00000000", "0x0004c7d2", "0x0004c7fc"]
 
     def __init__(self):
         pass
