@@ -99,3 +99,5 @@ El juego funciona como un árbol de decisiones donde:
 - Según el input del jugador (o falta de él), se salta al siguiente nodo vía `sequences`
 - Los paths exitosos llevan eventualmente a nodos terminales o a la siguiente escena
 - Los paths de fallo/timeout llevan a nodos de muerte (☠️)
+
+![Escena estrellas](./screenshots/graph_estrellas.png)
