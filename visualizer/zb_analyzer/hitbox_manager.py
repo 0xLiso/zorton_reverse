@@ -123,8 +123,8 @@ Alto: {alto} px"""
                 }
             """)
             play_btn.clicked.connect(
-                lambda: self._play_hitbox_frames(
-                    frame_start, frame_end, [hb_with_index]
+                lambda checked=False, c=cb: self._play_hitbox_frames(
+                    frame_start, frame_end, [hb_with_index], c
                 )
             )
             row_layout.addWidget(play_btn)
@@ -171,9 +171,10 @@ Alto: {alto} px"""
         for cb, _ in self.checkboxes:
             cb.setChecked(False)
 
-    def _play_hitbox_frames(self, start, end, hitboxes):
+    def _play_hitbox_frames(self, start, end, hitboxes, checkbox=None):
         """Reproduce los frames específicos del hitbox sin reconstruir la UI"""
-        self.video_widget.set_hitboxes(hitboxes)
+        if checkbox is not None:
+            checkbox.setChecked(True)
 
         # reproducir los frames usando el video widget directamente
         # para evitar que el callback reconstruya la UI
