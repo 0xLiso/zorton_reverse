@@ -285,38 +285,13 @@ class MainWindow(QMainWindow):
         scroll_buttons.setWidgetResizable(True)
 
         self.frame_button_manager = FrameButtonManager(
-            self.buttons_layout, self.play_frame_loop, self.update_frame_history
+            self.buttons_layout, self.play_frame_loop
         )
-
-        # historial de frames
-        frames_header_layout = QHBoxLayout()
-        frames_header_layout.addWidget(QLabel("Frames:"))
-
-        history_scroll = QScrollArea()
-        history_scroll.setWidgetResizable(True)
-        history_scroll.setFixedHeight(30)
-        history_scroll.setHorizontalScrollBarPolicy(
-            Qt.ScrollBarPolicy.ScrollBarAsNeeded
-        )
-        history_scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-
-        self.history_label = QLabel("-")
-        self.history_label.setStyleSheet("color: #888; font-style: italic;")
-        history_scroll.setWidget(self.history_label)
-
-        frames_header_layout.addWidget(history_scroll, 1)
-
-        reset_history_btn = QPushButton("↻")
-        reset_history_btn.setFixedWidth(30)
-        reset_history_btn.setToolTip("Resetear historial")
-        reset_history_btn.clicked.connect(self.reset_frame_history)
-        frames_header_layout.addWidget(reset_history_btn)
 
         # panel derecho
         right_layout.addWidget(QLabel("Hitboxes:"))
         right_layout.addWidget(self.hitbox_controls)
         right_layout.addWidget(scroll, 1)
-        right_layout.addLayout(frames_header_layout)
         right_layout.addWidget(scroll_buttons, 1)
 
         main_layout = QHBoxLayout()
@@ -349,7 +324,6 @@ class MainWindow(QMainWindow):
         # Cargar los caminos del grafo
         paths = scene.get("graph_paths", [])
         self.frame_button_manager.update_paths(paths)
-        self.frame_button_manager.reset_history()
 
         # Actualizar hitboxes del primer nodo si existe
         if paths and paths[0]["nodes"]:
@@ -444,18 +418,6 @@ class MainWindow(QMainWindow):
         msg_box.setTextFormat(Qt.TextFormat.RichText)
         msg_box.setText(message)
         msg_box.exec()
-
-    def update_frame_history(self, history):
-        """actualizar el label del historial de frames"""
-        if history:
-            history_text = ", ".join([f"#{num}" for num in history])
-            self.history_label.setText(f"{history_text}")
-        else:
-            self.history_label.setText("-")
-
-    def reset_frame_history(self):
-        """resetear el historial de frames"""
-        self.frame_button_manager.reset_history()
 
     def goto_frame(self):
         """saltar a un frame específico"""

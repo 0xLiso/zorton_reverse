@@ -4,12 +4,9 @@ from PySide6.QtWidgets import QHBoxLayout, QLabel, QPushButton
 class FrameButtonManager:
     """Gestiona la navegación por paths del grafo y nodos dentro de cada path"""
 
-    def __init__(
-        self, buttons_layout, play_frame_loop_callback, history_update_callback=None
-    ):
+    def __init__(self, buttons_layout, play_frame_loop_callback):
         self.buttons_layout = buttons_layout
         self.play_frame_loop_callback = play_frame_loop_callback
-        self.history_update_callback = history_update_callback
 
         # grafo
         self.paths = []
@@ -252,11 +249,6 @@ class FrameButtonManager:
             self.current_path_idx = 0
             self.current_node_idx = 0
             self._update_display()
-
-    def reset_history(self):
-        """Resetear el historial"""
-        if self.history_update_callback:
-            self.history_update_callback([])
 
     def clear_active_button(self):
         """Desmarca el botón activo"""
