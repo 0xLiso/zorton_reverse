@@ -17,7 +17,6 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget,
 )
-
 from zb_analyzer.config_manager import ConfigManager
 from zb_analyzer.frame_buttons import FrameButtonManager
 from zb_analyzer.hitbox_controls import HitboxControlsPanel
@@ -345,10 +344,19 @@ class MainWindow(QMainWindow):
         scene = self.scenes[index]
         print(f"Cambiando a escena {index + 1}: {scene['offset']}")
 
-        self.hitbox_manager.update_hitboxes(scene["hitboxes"])
-        self.frame_button_manager.update_frame_buttons(scene["frames"])
+        # Cargar los caminos del grafo
+        paths = scene.get("graph_paths", [])
+        self.frame_button_manager.update_paths(paths)
         self.frame_button_manager.reset_history()
-        self.frame_button_manager.activate_first_frame()
+
+        # Actualizar hitboxes del primer nodo si existe
+        if paths and paths[0]["nodes"]:
+            first_node = paths[0]["nodes"][0]
+            self.hitbox_manager.update_hitboxes(first_node.get("hitboxes", []))
+        else:
+            self.hitbox_manager.update_hitboxes([])
+
+        self.frame_button_manager.activate_first_node()
 
     def toggle_play_pause(self):
         if self.is_playing:
@@ -360,8 +368,13 @@ class MainWindow(QMainWindow):
 
         self.playback_controls.set_play_state(self.is_playing)
 
-    def play_frame_loop(self, start, end):
+    def play_frame_loop(self, start, end, hitboxes=None):
+        """Reproduce un loop de frames y actualiza los hitboxes"""
         self.video_widget.play_loop(start, end)
+
+        if hitboxes is not None:
+            self.hitbox_manager.update_hitboxes(hitboxes)
+
         if not self.is_playing:
             self.is_playing = True
             self.playback_controls.set_play_state(self.is_playing)
