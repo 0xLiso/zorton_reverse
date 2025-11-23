@@ -109,7 +109,7 @@ class FileSelectionDialog(QDialog):
             self,
             "Seleccionar archivo JSON",
             start_dir,
-            "JSON (zb.json);;Todos los archivos (*.*)",
+            "JSON Files (*.json);;All Files (*)",
         )
         if file_path:
             self.json_input.setText(file_path)
