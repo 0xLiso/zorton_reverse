@@ -22,6 +22,7 @@ class FrameButtonManager:
         self.info_label = None
         self.path_label = None
         self.node_label = None
+        self.node_info_label = None
 
     def update_paths(self, paths):
         """Actualiza los paths del grafo"""
@@ -92,6 +93,34 @@ class FrameButtonManager:
 
         self.buttons_layout.addLayout(self.node_nav_layout)
 
+        # info adicional del nodo (mem offset y respawn)
+        self.node_info_label = QLabel()
+        self.node_info_label.setStyleSheet(
+            "color: #888; font-size: 10px; padding: 5px; font-family: monospace;"
+        )
+        self.node_info_label.setWordWrap(True)
+        self.buttons_layout.addWidget(self.node_info_label)
+
+        # botónm para reproducir frames del nodo actual
+        self.play_node_layout = QHBoxLayout()
+        self.play_node_btn = QPushButton()
+        self.play_node_btn.setStyleSheet("""
+            QPushButton {
+                background-color: #2196F3;
+                color: white;
+                font-weight: bold;
+                padding: 8px;
+                border-radius: 4px;
+            }
+            QPushButton:hover {
+                background-color: #1976D2;
+            }
+        """)
+        self.play_node_btn.clicked.connect(self._replay_current_node)
+        self.play_node_layout.addWidget(self.play_node_btn)
+
+        self.buttons_layout.addLayout(self.play_node_layout)
+
     def _prev_path(self):
         """Navegar al path anterior"""
         if self.current_path_idx > 0:
@@ -143,7 +172,45 @@ class FrameButtonManager:
 
         self.node_label.setText(f"Nodo {self.current_node_idx + 1} / {len(nodes)}")  # type: ignore
 
+        mem_offset = current_node.get("mem", "N/A")
+        ptr_respawn = current_node.get("ptr_node_respawn")
+
+        info_parts = [f"Mem: {mem_offset}"]
+
+        if ptr_respawn:
+            info_parts.append(f"💀 Respawn: {ptr_respawn}")
+
+        self.node_info_label.setText(" | ".join(info_parts))  # type: ignore
+
         # reproducir frames del nodo actual
+        frame_start = current_node.get("frame_start")
+        frame_end = current_node.get("frame_end")
+
+        if frame_start is not None and frame_end is not None:
+            duration = frame_end - frame_start + 1
+            self.play_node_btn.setText(
+                f"▶ Reproducir nodo: {frame_start}-{frame_end} ({duration} frames)"
+            )
+            self.play_node_btn.setEnabled(True)
+            self.play_frame_loop_callback(
+                frame_start, frame_end, current_node.get("hitboxes", [])
+            )
+        else:
+            self.play_node_btn.setText("▶ Reproducir nodo (sin frames)")
+            self.play_node_btn.setEnabled(False)
+
+    def _replay_current_node(self):
+        """Reproduce nuevamente el nodo actual"""
+        if not self.paths or self.current_path_idx >= len(self.paths):
+            return
+
+        current_path = self.paths[self.current_path_idx]
+        nodes = current_path["nodes"]
+
+        if self.current_node_idx >= len(nodes):
+            return
+
+        current_node = nodes[self.current_node_idx]
         frame_start = current_node.get("frame_start")
         frame_end = current_node.get("frame_end")
 
