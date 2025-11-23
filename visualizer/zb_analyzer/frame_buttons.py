@@ -69,7 +69,7 @@ class FrameButtonManager:
 
         # path actual
         self.info_label = QLabel()
-        self.info_label.setStyleSheet("color: #666; font-size: 18px; padding: 5px;")
+        self.info_label.setStyleSheet("color: #666; font-size: 15px; padding: 5px;")
         self.buttons_layout.addWidget(self.info_label)
 
         # nodos
@@ -96,7 +96,7 @@ class FrameButtonManager:
         # info adicional del nodo (mem offset y respawn)
         self.node_info_label = QLabel()
         self.node_info_label.setStyleSheet(
-            "color: #888; font-size: 10px; padding: 5px; font-family: monospace;"
+            "color: #888; font-size: 15px; padding: 5px; font-family: monospace;"
         )
         self.node_info_label.setWordWrap(True)
         self.buttons_layout.addWidget(self.node_info_label)
