@@ -107,6 +107,12 @@ class SceneDataLoader:
             node = mem_map[mem]
             val = node.get("value", {})
 
+            frame_start = self._frame_val(val.get("ptr_frame_start"))
+            frame_end = self._frame_val(val.get("ptr_frame_end"))
+
+            if frame_start is None or frame_end is None:
+                continue
+
             hitbox_frame_start = self._frame_val(val.get("ptr_frame_hitbox_start"))
             hitbox_frame_end = self._frame_val(val.get("ptr_frame_hitbox_end"))
 
@@ -115,8 +121,8 @@ class SceneDataLoader:
             # extraer info del nodo
             step = {
                 "mem": mem,
-                "frame_start": self._frame_val(val.get("ptr_frame_start")),
-                "frame_end": self._frame_val(val.get("ptr_frame_end")),
+                "frame_start": frame_start,
+                "frame_end": frame_end,
                 "ptr_node_respawn": ptr_node_respawn
                 if ptr_node_respawn != "0x00000000"
                 else None,
