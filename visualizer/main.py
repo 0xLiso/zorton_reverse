@@ -147,7 +147,7 @@ class MainWindow(QMainWindow):
         self.scene_selector = QComboBox()
         self.scene_selector.addItems(
             [
-                f"Escena #{scene.get('id', i)} - {scene['offset']}"
+                f"[{i + 1}] Escena #{scene.get('id', '?')} - {scene['offset']}"
                 for i, scene in enumerate(self.scenes)
             ]
         )

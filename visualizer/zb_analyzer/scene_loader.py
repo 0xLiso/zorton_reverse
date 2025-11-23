@@ -21,10 +21,16 @@ class SceneDataLoader:
             self.scenes = []
             self.paths = []
 
-            if isinstance(data, dict) and "chunks" in data:
+            chunks = data["chunks"]
+            scene_order = data.get("scene_order", [])
+
+            if isinstance(data, dict) and chunks:
                 for scene_data in data["chunks"]:
                     scene = self._process_graph_data(scene_data)
                     self.scenes.append(scene)
+
+            if scene_order:
+                self._reorder_scenes_by_game_order(scene_order, chunks)
 
             print(
                 f"Cargado grafo con {len(self.scenes)} escenas y {sum(len(s.get('graph_paths', [])) for s in self.scenes)} paths totales"
@@ -85,6 +91,8 @@ class SceneDataLoader:
             path_data = self._convert_path_to_data(path, mem_map)
             if path_data:
                 scene["graph_paths"].append(path_data)
+
+        scene["graph_paths"].reverse()
 
         return scene
 
@@ -147,6 +155,44 @@ class SceneDataLoader:
             ),
             "total_hitboxes": sum(len(s["hitboxes"]) for s in nodes_data),
         }
+
+    def _reorder_scenes_by_game_order(self, scene_order, chunks):
+        """Reordena las escenas según scene_order del juego"""
+        chunk_order_map = {}
+
+        for chunk in chunks:
+            chunk_id = chunk.get("id")
+            nodes = chunk.get("nodes", [])
+
+            if nodes and chunk_id is not None:
+                first_node_mem = nodes[0].get("mem_offset")
+                if first_node_mem:
+                    chunk_order_map[first_node_mem] = chunk_id
+
+        chunk_order = []
+        seen_chunks = set()
+
+        for mem_offset in scene_order:
+            if mem_offset in chunk_order_map:
+                chunk_id = chunk_order_map[mem_offset]
+                if chunk_id not in seen_chunks:
+                    chunk_order.append(chunk_id)
+                    seen_chunks.add(chunk_id)
+
+        # añadir chunks que no están en scene_order al final
+        for scene in self.scenes:
+            chunk_id = scene.get("id")
+            if chunk_id is not None and chunk_id not in seen_chunks:
+                chunk_order.append(chunk_id)
+
+        scenes_by_id = {scene.get("id"): scene for scene in self.scenes}
+        self.scenes = [
+            scenes_by_id[chunk_id]
+            for chunk_id in chunk_order
+            if chunk_id in scenes_by_id
+        ]
+
+        print(f"Escenas reordenadas según orden del juego: {chunk_order[:10]}...")
 
     def get_paths(self, scene_index=0):
         """Retorna todos los caminos de una escena específica"""
