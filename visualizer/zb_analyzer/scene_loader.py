@@ -1,13 +1,17 @@
 import json
 import traceback
-from itertools import chain
+
+from .graph_processor import GraphProcessor
+
 
 class SceneDataLoader:
     """Cargador de datos de escenas desde archivo JSON"""
 
-    def __init__(self, json_path="zb.json"):
+    def __init__(self, json_path):
         self.json_path = json_path
         self.scenes = []
+        self.paths = []
+        self.graph_processor = GraphProcessor()
 
     def load_scenes(self):
         try:
@@ -15,11 +19,17 @@ class SceneDataLoader:
                 data = json.load(f)
 
             self.scenes = []
-            for scene_data in data:
-                scene = self._process_scene_data(scene_data)
-                self.scenes.append(scene)
+            self.paths = []
 
-            print(f"Cargadas {len(self.scenes)} escenas del archivo JSON")
+            if isinstance(data, dict) and "chunks" in data:
+                for scene_data in data["chunks"]:
+                    scene = self._process_graph_data(scene_data)
+                    self.scenes.append(scene)
+
+            print(
+                f"Cargado grafo con {len(self.scenes)} escenas y {sum(len(s.get('graph_paths', [])) for s in self.scenes)} paths totales"
+            )
+
             return self.scenes
 
         except Exception as e:
@@ -28,67 +38,118 @@ class SceneDataLoader:
             traceback.print_exc()
             return self._get_default_scenes()
 
-    def _process_scene_data_v0(self, scene_data):
+    def _frame_val(self, field):
+        """
+        Extraer frame integer de ptr_frame_*
+
+        - está en el tercer elemento de la lista
+        - ejemplo:
+
+            "ptr_frame_start": [
+                "0x0004731c",
+                "0x0000751c",
+                "10548"
+                ]
+        """
+
+        if not isinstance(field, list) or len(field) < 3:
+            return None
+        s = field[2]
+        try:
+            return int(s)
+        except Exception:
+            return None
+
+    def _process_graph_data(self, scene_data):
+        """Procesa el grafo y extrae todos los caminos válidos usando GraphProcessor"""
         scene = {
             "id": scene_data.get("id", 0),
-            "offset": scene_data.get("offset", ""),
-            "hitboxes": [],
-            "frames": [],
+            "offset": scene_data.get("mem_offset", scene_data.get("file_offset", "")),
+            "graph_paths": [],
         }
 
-        if "hitboxes" in scene_data:
-            for hitbox in scene_data["hitboxes"]:
-                rect = hitbox.get("rect", {})
-                scene["hitboxes"].append(
-                    {
-                        "x0": rect.get("x0", 0),
-                        "y0": rect.get("y0", 0),
-                        "x1": rect.get("x1", 0),
-                        "y1": rect.get("y1", 0),
-                        "points": hitbox.get("points", 500),
-                    }
-                )
+        nodes = scene_data.get("nodes", [])
+        if not nodes:
+            return scene
 
-        if "frames" in scene_data:
-            for frame in scene_data["frames"]:
-                scene["frames"].append(
-                    {"from": frame.get("from", 0), "to": frame.get("to", 0)}
-                )
+        G, mem_map = self.graph_processor.build_graph(nodes)
+
+        priority_root = scene_data.get("mem_offset")
+        roots = self.graph_processor.find_roots(G, priority_root)
+
+        all_paths = self.graph_processor.find_all_paths(G, roots)
+
+        # convertir paths a estructura de datos usada
+        # se mantienen los hitboxes pero la lista de frames ya no es necesaria
+        for path in all_paths:
+            path_data = self._convert_path_to_data(path, mem_map)
+            if path_data:
+                scene["graph_paths"].append(path_data)
 
         return scene
-    
-    def _process_scene_data(self, scene_data):
-        scene = {
-            "id": scene_data.get("id", 0),
-            "offset": scene_data.get("file_offset", ""),
-            "hitboxes": [],
-            "frames": [],
+
+    def _convert_path_to_data(self, path, mem_map):
+        """Convierte un camino de NetworkX a la estructura de datos esperada"""
+        nodes_data = []
+
+        for mem in path:
+            if mem not in mem_map:
+                continue
+
+            node = mem_map[mem]
+            val = node.get("value", {})
+
+            # extraer info del nodo
+            step = {
+                "mem": mem,
+                "frame_start": self._frame_val(val.get("ptr_frame_start")),
+                "frame_end": self._frame_val(val.get("ptr_frame_end")),
+                "hitboxes": [],
+            }
+
+            # extraer hitboxes
+            for item in val.get("lista_hitboxes", []):
+                hb = item.get("hitbox", {})
+                if hb:
+                    step["hitboxes"].append(
+                        {
+                            "x0": hb.get("x0", 0),
+                            "y0": hb.get("y0", 0),
+                            "x1": hb.get("x1", 0),
+                            "y1": hb.get("y1", 0),
+                            "points": hb.get("score", 0),
+                        }
+                    )
+
+            nodes_data.append(step)
+
+        if not nodes_data:
+            return None
+
+        return {
+            "nodes": nodes_data,
+            "total_frames": sum(
+                (s["frame_end"] or 0) - (s["frame_start"] or 0) + 1
+                for s in nodes_data
+                if s["frame_start"] is not None and s["frame_end"] is not None
+            ),
+            "total_hitboxes": sum(len(s["hitboxes"]) for s in nodes_data),
         }
 
-        hitboxes_bad = [ x["value"]["ptr_hitbox"] for x in scene_data["nodes"] if len(x["value"]["ptr_hitbox"])>0 ]
-        hitboxes = list(chain.from_iterable(hitboxes_bad))
-        for hit in hitboxes:
-            rect = hit["hitbox"]
-            scene["hitboxes"].append(
-                {
-                    "x0": rect.get("x0", -1),
-                    "y0": rect.get("y0", -1),
-                    "x1": rect.get("x1", -1),
-                    "y1": rect.get("y1", -1),
-                    "points": rect.get("score", -1),
-                }
-            )
+    def get_paths(self, scene_index=0):
+        """Retorna todos los caminos de una escena específica"""
+        if scene_index < len(self.scenes):
+            return self.scenes[scene_index].get("graph_paths", [])
+        return []
 
-        if "frames" in scene_data:
-            lst_frames = [x["frame"] for x in scene_data["frames"]]
-            
-            lst_pairs = [  (lst_frames[i],lst_frames[i+1]) for i in range(0,len(lst_frames)-1,2) ]
-            for frame in lst_pairs:
-                scene["frames"].append(
-                    {"from": int(frame[0]), "to": int(frame[1])}
-                )
-
-        return scene
+    def get_path_node(self, scene_index, path_idx, node_idx):
+        """Obtiene un nodo específico de un camino"""
+        paths = self.get_paths(scene_index)
+        if path_idx < len(paths):
+            nodes = paths[path_idx]["nodes"]
+            if node_idx < len(nodes):
+                return nodes[node_idx]
+        return None
 
     def _get_default_scenes(self):
         """datos de ejemplo si falla la carga"""
