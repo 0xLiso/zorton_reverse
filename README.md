@@ -28,6 +28,10 @@ En este directorio estamos guardando los scripts que estamos desarrollando para 
 # Estructura del JSON
 El archivo `Zorton_brothes_v1.01.json` contiene la estructura completa del juego parseada desde el binario de Amiga.
 
+"scene_order": Listado de escenas, se empieza desde el 0 y la escena final la 25. Despus de eso creo que todo son muertes distintas y otras cosas que tenemos que ver que son. Pero con esto se sabe que de la escena en 0 se salta a la 1, de ahi a la 2, and so on.
+
+"spare_chunks": chunks que aparecen en la lista de escenas, pero no han sido parseados en las escenas del juego. No los he mirado a fondo, pero creo que son las muertes :).
+
 ## `scene_order`
 Array con las direcciones de memoria de las escenas en orden de juego (0-25 son las escenas principales del juego).
 
