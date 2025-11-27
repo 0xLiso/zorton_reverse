@@ -1,64 +1,107 @@
-# zorton_reverse
+# Zorton Brothers reverse
 Intento de hacer un poco de ingenieria inversa de el arcade de Zorton Brothers.
 
-# video dump
-el vídeo ripeado por los grandes de Recreativas.org  puedes encontrarlo aquí:
+# Video dump
+El vídeo ripeado por los grandes de Recreativas.org  puedes encontrarlo aquí:
 https://archive.org/details/los-justicieros-zorton-brothers-picmatic-1993-cav-pal-spanish
 
 
-# Visuazlicer
-en el directorio ./visualizer está el programa hecho por "@logan76able" para ver los frames y rangosd e frames del vídeo.
+# Visualizer
+En el directorio ./visualizer está el programa hecho por [havi](https://github.com/klavman) para ver los frames y rangos de frames del vídeo.
 para ejecturarlo:
 
 ```bash
 cd visualizer
-uv run python main.py
-
+uv run main.py
 ```
 Ten encuenta que el vídeo deberás tenerlo descargado previamente.
 
 
-
-# ghidra
-en esta version estamos usando ghidra 10.3.1. con el plugin para desensamblar Amiga500 y cargar el formato ejecutable de Amiga Hunk.
+# Ghidra
+En esta version estamos usando ghidra 10.3.1. con el plugin para desensamblar Amiga500 y cargar el formato ejecutable de Amiga Hunk.
 https://github.com/lab313ru/ghidra_amiga_ldr
 
 
+# Directorio test_python
+En este directorio estamos guardando los scripts que estamos desarrollando para extraer la estructura de los datos.
 
-# test_python
-en este directorio estamos guardando los scripts que estamos desarrollando para extraer la estructura de los datos.
+# Estructura del JSON
+El archivo `Zorton_brothes_v1.01.json` contiene la estructura completa del juego parseada desde el binario de Amiga.
 
-## formato del JSON
-
-"scene_order": Listado de escenas, se empieza desde el 0 y la escena final la 25. Despus de eso creo que todo son muertes distintas y otras cosas que tenemos que ver que son.  Pero con esto se sabe que de la escena en 0 se salta a la 1, de ahi a la 2, and so on.
-
-"chunks": listado de los chunks por escena. cada chunch tiene su frame inicial, frame final y hitboxes, cuando puedes disparar a cada hitbox y en secuences siempre es 0-> falla el disparo o se acaba el time,1 -> se le da al hitbox 1, 2->se le da al htibox 2, etc... 
-Tambien tiene un "ptr_node_respawn" que es el inicio y fin cuando te matan en esta escena y continuas. 
+"scene_order": Listado de escenas, se empieza desde el 0 y la escena final la 25. Despus de eso creo que todo son muertes distintas y otras cosas que tenemos que ver que son. Pero con esto se sabe que de la escena en 0 se salta a la 1, de ahi a la 2, and so on.
 
 "spare_chunks": chunks que aparecen en la lista de escenas, pero no han sido parseados en las escenas del juego. No los he mirado a fondo, pero creo que son las muertes :).
 
-## formato de las escenas y sequcencias
+## `scene_order`
+Array con las direcciones de memoria de las escenas en orden de juego (0-25 son las escenas principales del juego).
 
-las sequencias estan definides en una struct de 0x2A bytes y parece que tiene este formato:
+## `chunks`
+Array de escenas del juego. Cada escena contiene:
+
+- **`id`**: Identificador de la escena
+- **`file_offset`** / **`mem_offset`**: Posiciones en archivo y memoria
+- **`frames`**: Lista de frames del laserdisc utilizados
+- **`nodes`**: Árbol de decisiones de la escena
+
+## Estructura de un nodo (`tree_logic_node`)
+```javascript
+{
+        "type": "tree_logic_node",
+        "mem_offset": "0x...",
+        "value": {
+                "ptr_frame_start": "frame inicial",
+                "ptr_frame_end": "frame final", 
+                "ptr_frame_hitbox_start": "frame donde el hitbox se activa",
+                "ptr_frame_hitbox_end": "frame donde el hitbox termina",
+                "lista_hitboxes": [/* hitboxes interactivos */],
+                "sequences": [
+                        "0x00000000",
+                        "0x...",
+                        "0x...",
+                        // ...
+                ],
+                "ptr_node_respawn": "0x..." 
+        }
+}
+```
+
+- `0x0004c7d2`: Nodo de muerte (death_and_destruction ☠️)
+- `0x0004c7fc`: Nodo de finalización/transición
+- `0x00000000`: Nodo terminal
+
+## `spare_chunks`
+Nodos parseados pero no referenciados en las escenas principales (muertes alternativas, secuencias sin usar, etc.).
+
+## Formato de la estructura
 
 ```c
 struct chunk {
-        frame *ptr_frame_start ; // frame where the sequence starts))
-        frame *ptr_frame_end ; // frame where the sequence end))
-        frame *ptr_frame_hitbox_start ; // frame  starts where the hitbox is valid
-        frame *ptr_frame_hitbox_end ; // frame ends where the hitbox is valid
-        hitbox *ptr_hitbox ; // ptr to the hitbox 
-        frame *ptr_frame_unk ;// frame unknown
-        chunk *ptr_node_respawn ;// chunk sequenche on respawn ( kinda save point)
-        
-        int_8 field_0 ;// unk
-        int_8 field_1;// unk
-        int_8 type_a ;// unk
-        int_8 type_b ;// unk
-        int_8 num_sequences // num the sequencies in the  list_sequences.
-        int_8 type_d = ;// unk
-        void *ptr_fn_callback ;// callback function 
-        chunk **ptr_list_sequences ;// list of ptrs to chunks, usually 0-> on death 1->on hit first hitbox 2-> on hit second hitbox...
+                frame *ptr_frame_start;           // frame donde empieza la secuencia
+                frame *ptr_frame_end;             // frame donde termina
+                frame *ptr_frame_hitbox_start;    // frame donde el hitbox se activa
+                frame *ptr_frame_hitbox_end;      // frame donde el hitbox termina
+                hitbox *ptr_hitbox;               // puntero al hitbox
+                frame *ptr_frame_unk;             // frame desconocido
+                chunk *ptr_node_respawn;          // checkpoint (continue point)
+                
+                int_8 field_0;                    // desconocido
+                int_8 field_1;                    // desconocido
+                int_8 type_a;                     // tipo/flags
+                int_8 type_b;                     // tipo/flags
+                int_8 num_sequences;              // número de secuencias
+                int_8 type_d;                     // desconocido
+                void *ptr_fn_callback;            // función callback
+                chunk **ptr_list_sequences;       // lista de punteros a chunks
 }
-
 ```
+
+## Navegación por el grafo
+El juego funciona como un árbol de decisiones donde:
+
+- Cada nodo reproduce un rango de frames del laserdisc
+- Durante ciertos frames, se activan hitboxes
+- Según el input del jugador (o falta de él), se salta al siguiente nodo vía `sequences`
+- Los paths exitosos llevan eventualmente a nodos terminales o a la siguiente escena
+- Los paths de fallo/timeout llevan a nodos de muerte (☠️)
+
+![Escena estrellas](./screenshots/graph_estrellas.png)

@@ -2,7 +2,7 @@
 Gestor de hitboxes que maneja la creación de checkboxes y la aplicación de offsets.
 """
 
-from PySide6.QtWidgets import QCheckBox
+from PySide6.QtWidgets import QCheckBox, QHBoxLayout, QPushButton, QWidget
 
 from .video_player import VideoPlayer
 
@@ -10,9 +10,10 @@ from .video_player import VideoPlayer
 class HitboxManager:
     """Gestiona los hitboxes, checkboxes y offsets"""
 
-    def __init__(self, checkbox_layout, video_widget):
+    def __init__(self, checkbox_layout, video_widget, play_frame_callback=None):
         self.checkbox_layout = checkbox_layout
         self.video_widget = video_widget
+        self.play_frame_callback = play_frame_callback
         self.checkboxes = []
         self.original_hitboxes = []
         self.current_offset_x = 0
@@ -47,7 +48,7 @@ class HitboxManager:
                 child.widget().deleteLater()
 
     def _create_hitbox_checkbox(self, index, hitbox):
-        """Crea un checkbox para un hitbox"""
+        """Crea un checkbox para un hitbox con botón de reproducción"""
         points = hitbox.get("points", 500)
         hb_with_index = hitbox.copy()
         hb_with_index["color_index"] = index
@@ -58,14 +59,22 @@ class HitboxManager:
         ancho = x1 - x0
         alto = y1 - y0
 
+        frame_start = hitbox.get("frame_start")
+        frame_end = hitbox.get("frame_end")
+
         # Obtener color
         color = VideoPlayer.HITBOX_COLORS[index % len(VideoPlayer.HITBOX_COLORS)]
         color_hex = color.name()
 
-        # Crear checkbox con valores decimales y hexadecimales
-        cb = QCheckBox(
-            f"Hitbox {index + 1} ({x0}, {y0}) → ({x1}, {y1}) | 0x{x0:02X},{y0:02X} → 0x{x1:02X},{y1:02X}"
-        )
+        row_widget = QWidget()
+        row_layout = QHBoxLayout()
+        row_layout.setContentsMargins(0, 0, 0, 0)
+        row_widget.setLayout(row_layout)
+
+        # Crear checkbox con valores decimales
+        checkbox_text = f"Hb {index + 1} ({x0}, {y0}) → ({x1}, {y1})"
+
+        cb = QCheckBox(checkbox_text)
         cb.setStyleSheet(f"""
             QCheckBox {{
                 color: {color_hex};
@@ -80,14 +89,49 @@ Coordenadas: ({x0}, {y0}) → ({x1}, {y1})
 Hexadecimal: (0x{x0:02X}, 0x{y0:02X}) → (0x{x1:02X}, 0x{y1:02X})
 Ancho: {ancho} px
 Alto: {alto} px"""
+
+        if frame_start is not None and frame_end is not None:
+            tooltip += f"\nFrames: {frame_start} - {frame_end} ({frame_end - frame_start + 1} frames)"
+
         cb.setToolTip(tooltip)
 
         cb.stateChanged.connect(
             lambda state, h=hb_with_index: self._on_checkbox_changed(state, h)
         )
+
+        row_layout.addWidget(cb)
+
+        # botón de reproducción
+        if (
+            frame_start is not None
+            and frame_end is not None
+            and self.play_frame_callback
+        ):
+            play_btn = QPushButton(f"▶ {frame_start}-{frame_end}")
+            # print(f"Botón para frames {frame_start}-{frame_end}")
+            play_btn.setFixedWidth(120)
+            play_btn.setToolTip(f"Reproducir frames {frame_start}-{frame_end}")
+            play_btn.setStyleSheet("""
+                QPushButton {
+                    color: white;
+                    font-weight: bold;
+                    border: none;
+                    border-radius: 3px;
+                }
+                QPushButton:hover {
+                    opacity: 0.8;
+                }
+            """)
+            play_btn.clicked.connect(
+                lambda checked=False, c=cb: self._play_hitbox_frames(
+                    frame_start, frame_end, [hb_with_index], c
+                )
+            )
+            row_layout.addWidget(play_btn)
+
         self.checkboxes.append((cb, hb_with_index))
 
-        return cb
+        return row_widget
 
     def _on_checkbox_changed(self, state, hitbox):
         """Se llama cuando cambia el estado de un checkbox"""
@@ -126,3 +170,12 @@ Alto: {alto} px"""
         """Desmarca todos los checkboxes"""
         for cb, _ in self.checkboxes:
             cb.setChecked(False)
+
+    def _play_hitbox_frames(self, start, end, hitboxes, checkbox=None):
+        """Reproduce los frames específicos del hitbox sin reconstruir la UI"""
+        if checkbox is not None:
+            checkbox.setChecked(True)
+
+        # reproducir los frames usando el video widget directamente
+        # para evitar que el callback reconstruya la UI
+        self.video_widget.play_loop(start, end)

@@ -17,7 +17,6 @@ from PySide6.QtWidgets import (
     QVBoxLayout,
     QWidget,
 )
-
 from zb_analyzer.config_manager import ConfigManager
 from zb_analyzer.frame_buttons import FrameButtonManager
 from zb_analyzer.hitbox_controls import HitboxControlsPanel
@@ -110,7 +109,7 @@ class FileSelectionDialog(QDialog):
             self,
             "Seleccionar archivo JSON",
             start_dir,
-            "JSON (zb.json);;Todos los archivos (*.*)",
+            "JSON Files (*.json);;All Files (*)",
         )
         if file_path:
             self.json_input.setText(file_path)
@@ -148,7 +147,7 @@ class MainWindow(QMainWindow):
         self.scene_selector = QComboBox()
         self.scene_selector.addItems(
             [
-                f"Escena #{scene.get('id', i)} - {scene['offset']}"
+                f"[{i + 1}] Escena #{scene.get('id', '?')} - {scene['offset']}"
                 for i, scene in enumerate(self.scenes)
             ]
         )
@@ -256,7 +255,9 @@ class MainWindow(QMainWindow):
         scroll.setWidget(self.checkbox_widget)
         scroll.setWidgetResizable(True)
 
-        self.hitbox_manager = HitboxManager(self.checkbox_layout, self.video_widget)
+        self.hitbox_manager = HitboxManager(
+            self.checkbox_layout, self.video_widget, self.play_frame_loop
+        )
 
         # conectar controles de hitboxes
         self.hitbox_controls.connect_select_buttons(
@@ -284,38 +285,13 @@ class MainWindow(QMainWindow):
         scroll_buttons.setWidgetResizable(True)
 
         self.frame_button_manager = FrameButtonManager(
-            self.buttons_layout, self.play_frame_loop, self.update_frame_history
+            self.buttons_layout, self.play_frame_loop
         )
-
-        # historial de frames
-        frames_header_layout = QHBoxLayout()
-        frames_header_layout.addWidget(QLabel("Frames:"))
-
-        history_scroll = QScrollArea()
-        history_scroll.setWidgetResizable(True)
-        history_scroll.setFixedHeight(30)
-        history_scroll.setHorizontalScrollBarPolicy(
-            Qt.ScrollBarPolicy.ScrollBarAsNeeded
-        )
-        history_scroll.setVerticalScrollBarPolicy(Qt.ScrollBarPolicy.ScrollBarAlwaysOff)
-
-        self.history_label = QLabel("-")
-        self.history_label.setStyleSheet("color: #888; font-style: italic;")
-        history_scroll.setWidget(self.history_label)
-
-        frames_header_layout.addWidget(history_scroll, 1)
-
-        reset_history_btn = QPushButton("↻")
-        reset_history_btn.setFixedWidth(30)
-        reset_history_btn.setToolTip("Resetear historial")
-        reset_history_btn.clicked.connect(self.reset_frame_history)
-        frames_header_layout.addWidget(reset_history_btn)
 
         # panel derecho
         right_layout.addWidget(QLabel("Hitboxes:"))
         right_layout.addWidget(self.hitbox_controls)
         right_layout.addWidget(scroll, 1)
-        right_layout.addLayout(frames_header_layout)
         right_layout.addWidget(scroll_buttons, 1)
 
         main_layout = QHBoxLayout()
@@ -345,10 +321,18 @@ class MainWindow(QMainWindow):
         scene = self.scenes[index]
         print(f"Cambiando a escena {index + 1}: {scene['offset']}")
 
-        self.hitbox_manager.update_hitboxes(scene["hitboxes"])
-        self.frame_button_manager.update_frame_buttons(scene["frames"])
-        self.frame_button_manager.reset_history()
-        self.frame_button_manager.activate_first_frame()
+        # Cargar los caminos del grafo
+        paths = scene.get("graph_paths", [])
+        self.frame_button_manager.update_paths(paths)
+
+        # Actualizar hitboxes del primer nodo si existe
+        if paths and paths[0]["nodes"]:
+            first_node = paths[0]["nodes"][0]
+            self.hitbox_manager.update_hitboxes(first_node.get("hitboxes", []))
+        else:
+            self.hitbox_manager.update_hitboxes([])
+
+        self.frame_button_manager.activate_first_node()
 
     def toggle_play_pause(self):
         if self.is_playing:
@@ -360,8 +344,13 @@ class MainWindow(QMainWindow):
 
         self.playback_controls.set_play_state(self.is_playing)
 
-    def play_frame_loop(self, start, end):
+    def play_frame_loop(self, start, end, hitboxes=None):
+        """Reproduce un loop de frames y actualiza los hitboxes"""
         self.video_widget.play_loop(start, end)
+
+        if hitboxes is not None:
+            self.hitbox_manager.update_hitboxes(hitboxes)
+
         if not self.is_playing:
             self.is_playing = True
             self.playback_controls.set_play_state(self.is_playing)
@@ -429,18 +418,6 @@ class MainWindow(QMainWindow):
         msg_box.setTextFormat(Qt.TextFormat.RichText)
         msg_box.setText(message)
         msg_box.exec()
-
-    def update_frame_history(self, history):
-        """actualizar el label del historial de frames"""
-        if history:
-            history_text = ", ".join([f"#{num}" for num in history])
-            self.history_label.setText(f"{history_text}")
-        else:
-            self.history_label.setText("-")
-
-    def reset_frame_history(self):
-        """resetear el historial de frames"""
-        self.frame_button_manager.reset_history()
 
     def goto_frame(self):
         """saltar a un frame específico"""

@@ -13,3 +13,5 @@ uv sync -U
 ```bash
 uv run main.py
 ```
+
+![Ejemplo](/screenshots/visualizer_1.jpg)
